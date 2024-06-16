@@ -8,22 +8,22 @@ namespace Projekt_IO_3
         public MainForm()
         {
             InitializeComponent();
-            LoadProjectNames();
+            //LoadProjectNames();
         }
 
-        private void LoadProjectNames()
-        {
-            DataBase dataBase = new DataBase();
+        //private void LoadProjectNames()
+        //{
+        //    DataBase dataBase = new DataBase();
             
-                List<string> projectNames = dataBase.GetAllNames();
+        //        List<string> projectNames = dataBase.GetAllNames();
 
-                foreach (string projectName in projectNames)
-                {
-                    ListViewItem item = new ListViewItem(projectName);
-                    // Jeœli masz inne kolumny do wype³nienia, u¿yj item.SubItems.Add
-                    ProjectList.Items.Add(item);
-                }         
-        }
+        //        foreach (string projectName in projectNames)
+        //        {
+        //            ListViewItem item = new ListViewItem(projectName);
+        //            // Jeœli masz inne kolumny do wype³nienia, u¿yj item.SubItems.Add
+        //            ProjectList.Items.Add(item);
+        //        }         
+        //}
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -76,8 +76,8 @@ namespace Projekt_IO_3
 
         private void NewProject_menu_Click(object sender, EventArgs e)
         {
-            DataForm dataForm = new DataForm();
-            dataForm.ShowDialog(this);
+            //DataForm dataForm = new DataForm();
+            //dataForm.ShowDialog(this);
         }
     }
 }
