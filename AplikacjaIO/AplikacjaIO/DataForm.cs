@@ -28,9 +28,13 @@ namespace AplikacjaIO
            
             string projectName = NewData_tb.Text;
             string table = "Projekty";
-            //DataBase dataBase = new DataBase();
-            //dataBase.AddToDataBase(projectName, table);
 
+            //"using" tworzy obiekt i usuwa go od razu po wykonaniu klamer
+            using (DataBase dataBase = new DataBase())
+            {
+                dataBase.AddToDataBase(projectName, table);
+            }
+            
         }
 
         private void Cancel_btn_Click(object sender, EventArgs e)

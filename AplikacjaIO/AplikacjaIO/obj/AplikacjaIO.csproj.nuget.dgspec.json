@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barte\\Pulpit\\ProjektIO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {}
+    "D:\\dane_z_kompa\\zajęcia\\studia\\Inżynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barte\\Pulpit\\ProjektIO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {
+    "D:\\dane_z_kompa\\zajęcia\\studia\\Inżynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barte\\Pulpit\\ProjektIO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
+        "projectUniqueName": "D:\\dane_z_kompa\\zajęcia\\studia\\Inżynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
         "projectName": "AplikacjaIO",
-        "projectPath": "C:\\Users\\barte\\Pulpit\\ProjektIO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
-        "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barte\\Pulpit\\ProjektIO\\AplikacjaIO\\AplikacjaIO\\obj\\",
+        "projectPath": "D:\\dane_z_kompa\\zajęcia\\studia\\Inżynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "D:\\dane_z_kompa\\zajęcia\\studia\\Inżynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\barte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

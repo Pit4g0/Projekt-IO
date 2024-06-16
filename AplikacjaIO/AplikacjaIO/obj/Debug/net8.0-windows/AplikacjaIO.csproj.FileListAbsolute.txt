@@ -26,7 +26,6 @@ D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\AplikacjaIO\A
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\Aplikacj.2495497D.Up2Date
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.csproj.AssemblyReference.cache
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.DataForm.resources
-D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.MainForm.resources
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.csproj.GenerateResource.cache
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.GeneratedMSBuildEditorConfig.editorconfig
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.AssemblyInfoInputs.cache
@@ -51,3 +50,4 @@ D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\Aplik
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\Aplikacj.2495497D.Up2Date
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.genruntimeconfig.cache
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\ref\AplikacjaIO.dll
+D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Repo\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\Projekt_IO_3.MainForm.resources

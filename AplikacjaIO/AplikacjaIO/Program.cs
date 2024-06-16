@@ -1,3 +1,5 @@
+using Projekt_IO_3;
+
 namespace AplikacjaIO
 {
     internal static class Program
