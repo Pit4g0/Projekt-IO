@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode8 = new TreeNode("Ostatnie");
-            TreeNode treeNode9 = new TreeNode("Projekt01");
-            TreeNode treeNode10 = new TreeNode("Projekt02");
-            TreeNode treeNode11 = new TreeNode("Praca", new TreeNode[] { treeNode9, treeNode10 });
-            TreeNode treeNode12 = new TreeNode("PH");
-            TreeNode treeNode13 = new TreeNode("Rozrywka", new TreeNode[] { treeNode12 });
-            TreeNode treeNode14 = new TreeNode("Archiwum");
-            ListViewItem listViewItem3 = new ListViewItem(new string[] { "Projekt01", "1:02:30" }, -1, Color.Empty, SystemColors.Window, null);
-            ListViewItem listViewItem4 = new ListViewItem(new string[] { "Projekt02", "3:30:19" }, -1);
+            TreeNode treeNode1 = new TreeNode("Ostatnie");
+            TreeNode treeNode2 = new TreeNode("Projekt01");
+            TreeNode treeNode3 = new TreeNode("Projekt02");
+            TreeNode treeNode4 = new TreeNode("Praca", new TreeNode[] { treeNode2, treeNode3 });
+            TreeNode treeNode5 = new TreeNode("PH");
+            TreeNode treeNode6 = new TreeNode("Rozrywka", new TreeNode[] { treeNode5 });
+            TreeNode treeNode7 = new TreeNode("Archiwum");
             menuStrip1 = new MenuStrip();
             plikToolStripMenuItem = new ToolStripMenuItem();
             NewProject_menu = new ToolStripMenuItem();
@@ -59,7 +57,7 @@
             label1 = new Label();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
+            Start_btn = new Button();
             textBox1 = new TextBox();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
@@ -152,21 +150,21 @@
             treeView1.Dock = DockStyle.Left;
             treeView1.Location = new Point(0, 27);
             treeView1.Name = "treeView1";
-            treeNode8.Name = "Węzeł0";
-            treeNode8.Text = "Ostatnie";
-            treeNode9.Name = "Węzeł4";
-            treeNode9.Text = "Projekt01";
-            treeNode10.Name = "Węzeł5";
-            treeNode10.Text = "Projekt02";
-            treeNode11.Name = "Projekt01";
-            treeNode11.Text = "Praca";
-            treeNode12.Name = "Węzeł6";
-            treeNode12.Text = "PH";
-            treeNode13.Name = "Węzeł2";
-            treeNode13.Text = "Rozrywka";
-            treeNode14.Name = "Węzeł3";
-            treeNode14.Text = "Archiwum";
-            treeView1.Nodes.AddRange(new TreeNode[] { treeNode8, treeNode11, treeNode13, treeNode14 });
+            treeNode1.Name = "Węzeł0";
+            treeNode1.Text = "Ostatnie";
+            treeNode2.Name = "Węzeł4";
+            treeNode2.Text = "Projekt01";
+            treeNode3.Name = "Węzeł5";
+            treeNode3.Text = "Projekt02";
+            treeNode4.Name = "Projekt01";
+            treeNode4.Text = "Praca";
+            treeNode5.Name = "Węzeł6";
+            treeNode5.Text = "PH";
+            treeNode6.Name = "Węzeł2";
+            treeNode6.Text = "Rozrywka";
+            treeNode7.Name = "Węzeł3";
+            treeNode7.Text = "Archiwum";
+            treeView1.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode4, treeNode6, treeNode7 });
             treeView1.Size = new Size(121, 585);
             treeView1.TabIndex = 1;
             treeView1.AfterSelect += treeView1_AfterSelect;
@@ -175,7 +173,6 @@
             // 
             ProjectList.Columns.AddRange(new ColumnHeader[] { Nazwa, Czas });
             ProjectList.Dock = DockStyle.Left;
-            ProjectList.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4 });
             ProjectList.Location = new Point(121, 27);
             ProjectList.Name = "ProjectList";
             ProjectList.Size = new Size(207, 585);
@@ -200,7 +197,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(Start_btn);
             panel1.Controls.Add(textBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(328, 27);
@@ -236,15 +233,15 @@
             button2.Text = "Stop";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Start_btn
             // 
-            button1.Location = new Point(17, 81);
-            button1.Name = "button1";
-            button1.Size = new Size(117, 26);
-            button1.TabIndex = 1;
-            button1.Text = "Start";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            Start_btn.Location = new Point(17, 81);
+            Start_btn.Name = "Start_btn";
+            Start_btn.Size = new Size(117, 26);
+            Start_btn.TabIndex = 1;
+            Start_btn.Text = "Start";
+            Start_btn.UseVisualStyleBackColor = true;
+            Start_btn.Click += Start_btn_Click_1;
             // 
             // textBox1
             // 
@@ -293,7 +290,7 @@
         private TextBox textBox1;
         private Button button3;
         private Button button2;
-        private Button button1;
+        private Button Start_btn;
         private Label label1;
         private ToolStripMenuItem zmieńNazwęToolStripMenuItem;
         private ToolStripMenuItem usuńToolStripMenuItem;

@@ -8,6 +8,7 @@ namespace Projekt_IO_3
         public MainForm()
         {
             InitializeComponent();
+            LoadProjectNames();
         }
 
         private void LoadProjectNames()
@@ -21,9 +22,9 @@ namespace Projekt_IO_3
                     ListViewItem item = new ListViewItem(projectName);
                     // Jeœli masz inne kolumny do wype³nienia, u¿yj item.SubItems.Add
                     ProjectList.Items.Add(item);
-                }
-            
+                }         
         }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -49,9 +50,8 @@ namespace Projekt_IO_3
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Start_btn_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
