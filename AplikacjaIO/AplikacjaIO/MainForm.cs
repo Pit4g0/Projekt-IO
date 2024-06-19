@@ -73,27 +73,6 @@ namespace Projekt_IO_3
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            if (_isRunning)
-            {
-                _timer.Stop();
-                _isRunning = false;
-                _isPaused = false; // Zresetowanie flagi pauzy
-                _elapsedTime = TimeSpan.Zero;
-                textBox1.Text = "00:00:00";
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (_isRunning && !_isPaused)
-            {
-                _timer.Stop();
-                _isPaused = true;
-                _elapsedTime = DateTime.Now - _startTime; // Zapisanie upływającego czasu przy pauzie
-            }
-        }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -121,6 +100,28 @@ namespace Projekt_IO_3
         {
             //DataForm dataForm = new DataForm();
             //dataForm.ShowDialog(this);
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            if (_isRunning)
+            {
+                _timer.Stop();
+                _isRunning = false;
+                _isPaused = false; // Zresetowanie flagi pauzy
+                _elapsedTime = TimeSpan.Zero;
+                textBox1.Text = "00:00:00";
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (_isRunning && !_isPaused)
+            {
+                _timer.Stop();
+                _isPaused = true;
+                _elapsedTime = DateTime.Now - _startTime; // Zapisanie upływającego czasu przy pauzie
+            }
         }
     }
 }
