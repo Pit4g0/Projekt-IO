@@ -102,7 +102,8 @@ namespace Projekt_IO_3
             //dataForm.ShowDialog(this);
         }
 
-        private void button2_Click_2(object sender, EventArgs e)
+
+        private void Stop_btn_Click(object sender, EventArgs e)
         {
             if (_isRunning)
             {
@@ -114,7 +115,7 @@ namespace Projekt_IO_3
             }
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void Przerwa_btn_Click(object sender, EventArgs e)
         {
             if (_isRunning && !_isPaused)
             {

@@ -55,8 +55,8 @@
             Czas = new ColumnHeader();
             panel1 = new Panel();
             label1 = new Label();
-            button3 = new Button();
-            button2 = new Button();
+            Przerwa_btn = new Button();
+            Stop_btn = new Button();
             Start_btn = new Button();
             textBox1 = new TextBox();
             menuStrip1.SuspendLayout();
@@ -70,7 +70,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(794, 27);
+            menuStrip1.Size = new Size(794, 25);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -78,77 +78,77 @@
             // 
             plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewProject_menu, noweZadanieToolStripMenuItem, generujRaportToolStripMenuItem, nowyProjektToolStripMenuItem1 });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            plikToolStripMenuItem.Size = new Size(39, 21);
+            plikToolStripMenuItem.Size = new Size(38, 19);
             plikToolStripMenuItem.Text = "Plik";
             // 
             // NewProject_menu
             // 
             NewProject_menu.Name = "NewProject_menu";
-            NewProject_menu.Size = new Size(162, 22);
+            NewProject_menu.Size = new Size(150, 22);
             NewProject_menu.Text = "Nowy projekt";
             NewProject_menu.Click += NewProject_menu_Click;
             // 
             // noweZadanieToolStripMenuItem
             // 
             noweZadanieToolStripMenuItem.Name = "noweZadanieToolStripMenuItem";
-            noweZadanieToolStripMenuItem.Size = new Size(162, 22);
+            noweZadanieToolStripMenuItem.Size = new Size(150, 22);
             noweZadanieToolStripMenuItem.Text = "Nowe zadanie";
             // 
             // generujRaportToolStripMenuItem
             // 
             generujRaportToolStripMenuItem.Name = "generujRaportToolStripMenuItem";
-            generujRaportToolStripMenuItem.Size = new Size(162, 22);
+            generujRaportToolStripMenuItem.Size = new Size(150, 22);
             generujRaportToolStripMenuItem.Text = "Generuj raport";
             // 
             // nowyProjektToolStripMenuItem1
             // 
             nowyProjektToolStripMenuItem1.Name = "nowyProjektToolStripMenuItem1";
-            nowyProjektToolStripMenuItem1.Size = new Size(162, 22);
+            nowyProjektToolStripMenuItem1.Size = new Size(150, 22);
             nowyProjektToolStripMenuItem1.Text = "Nowy projekt";
             // 
             // edycjaToolStripMenuItem
             // 
             edycjaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { zmieńNazwęToolStripMenuItem, usuńToolStripMenuItem, archiwizujToolStripMenuItem });
             edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
-            edycjaToolStripMenuItem.Size = new Size(57, 21);
+            edycjaToolStripMenuItem.Size = new Size(53, 19);
             edycjaToolStripMenuItem.Text = "Edycja";
             edycjaToolStripMenuItem.Click += edycjaToolStripMenuItem_Click;
             // 
             // zmieńNazwęToolStripMenuItem
             // 
             zmieńNazwęToolStripMenuItem.Name = "zmieńNazwęToolStripMenuItem";
-            zmieńNazwęToolStripMenuItem.Size = new Size(151, 22);
+            zmieńNazwęToolStripMenuItem.Size = new Size(144, 22);
             zmieńNazwęToolStripMenuItem.Text = "Zmień nazwę";
             // 
             // usuńToolStripMenuItem
             // 
             usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            usuńToolStripMenuItem.Size = new Size(151, 22);
+            usuńToolStripMenuItem.Size = new Size(144, 22);
             usuńToolStripMenuItem.Text = "Usuń";
             // 
             // archiwizujToolStripMenuItem
             // 
             archiwizujToolStripMenuItem.Name = "archiwizujToolStripMenuItem";
-            archiwizujToolStripMenuItem.Size = new Size(151, 22);
+            archiwizujToolStripMenuItem.Size = new Size(144, 22);
             archiwizujToolStripMenuItem.Text = "Archiwizuj";
             // 
             // widokToolStripMenuItem
             // 
             widokToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pełnyEkranToolStripMenuItem });
             widokToolStripMenuItem.Name = "widokToolStripMenuItem";
-            widokToolStripMenuItem.Size = new Size(57, 21);
+            widokToolStripMenuItem.Size = new Size(53, 19);
             widokToolStripMenuItem.Text = "Widok";
             // 
             // pełnyEkranToolStripMenuItem
             // 
             pełnyEkranToolStripMenuItem.Name = "pełnyEkranToolStripMenuItem";
-            pełnyEkranToolStripMenuItem.Size = new Size(142, 22);
+            pełnyEkranToolStripMenuItem.Size = new Size(135, 22);
             pełnyEkranToolStripMenuItem.Text = "Pełny ekran";
             // 
             // treeView1
             // 
             treeView1.Dock = DockStyle.Left;
-            treeView1.Location = new Point(0, 27);
+            treeView1.Location = new Point(0, 25);
             treeView1.Name = "treeView1";
             treeNode1.Name = "Węzeł0";
             treeNode1.Text = "Ostatnie";
@@ -165,7 +165,7 @@
             treeNode7.Name = "Węzeł3";
             treeNode7.Text = "Archiwum";
             treeView1.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode4, treeNode6, treeNode7 });
-            treeView1.Size = new Size(121, 585);
+            treeView1.Size = new Size(121, 515);
             treeView1.TabIndex = 1;
             treeView1.AfterSelect += treeView1_AfterSelect;
             // 
@@ -173,9 +173,9 @@
             // 
             ProjectList.Columns.AddRange(new ColumnHeader[] { Nazwa, Czas });
             ProjectList.Dock = DockStyle.Left;
-            ProjectList.Location = new Point(121, 27);
+            ProjectList.Location = new Point(121, 25);
             ProjectList.Name = "ProjectList";
-            ProjectList.Size = new Size(207, 585);
+            ProjectList.Size = new Size(207, 515);
             ProjectList.TabIndex = 2;
             ProjectList.UseCompatibleStateImageBehavior = false;
             ProjectList.View = View.Details;
@@ -195,49 +195,51 @@
             // 
             panel1.BackColor = SystemColors.Window;
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(Przerwa_btn);
+            panel1.Controls.Add(Stop_btn);
             panel1.Controls.Add(Start_btn);
             panel1.Controls.Add(textBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(328, 27);
+            panel1.Location = new Point(328, 25);
             panel1.Name = "panel1";
-            panel1.Size = new Size(466, 585);
+            panel1.Size = new Size(466, 515);
             panel1.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(17, 10);
+            label1.Location = new Point(17, 9);
             label1.Name = "label1";
-            label1.Size = new Size(62, 17);
+            label1.Size = new Size(56, 15);
             label1.TabIndex = 4;
             label1.Text = "Projekt01";
             label1.Click += label1_Click;
             // 
-            // button3
+            // Przerwa_btn
             // 
-            button3.Location = new Point(266, 81);
-            button3.Name = "button3";
-            button3.Size = new Size(117, 26);
-            button3.TabIndex = 3;
-            button3.Text = "Przerwa";
-            button3.UseVisualStyleBackColor = true;
+            Przerwa_btn.Location = new Point(266, 71);
+            Przerwa_btn.Name = "Przerwa_btn";
+            Przerwa_btn.Size = new Size(117, 23);
+            Przerwa_btn.TabIndex = 3;
+            Przerwa_btn.Text = "Przerwa";
+            Przerwa_btn.UseVisualStyleBackColor = true;
+            Przerwa_btn.Click += Przerwa_btn_Click;
             // 
-            // button2
+            // Stop_btn
             // 
-            button2.Location = new Point(140, 81);
-            button2.Name = "button2";
-            button2.Size = new Size(117, 26);
-            button2.TabIndex = 2;
-            button2.Text = "Stop";
-            button2.UseVisualStyleBackColor = true;
+            Stop_btn.Location = new Point(140, 71);
+            Stop_btn.Name = "Stop_btn";
+            Stop_btn.Size = new Size(117, 23);
+            Stop_btn.TabIndex = 2;
+            Stop_btn.Text = "Stop";
+            Stop_btn.UseVisualStyleBackColor = true;
+            Stop_btn.Click += Stop_btn_Click;
             // 
             // Start_btn
             // 
-            Start_btn.Location = new Point(17, 81);
+            Start_btn.Location = new Point(17, 71);
             Start_btn.Name = "Start_btn";
-            Start_btn.Size = new Size(117, 26);
+            Start_btn.Size = new Size(117, 23);
             Start_btn.TabIndex = 1;
             Start_btn.Text = "Start";
             Start_btn.UseVisualStyleBackColor = true;
@@ -245,11 +247,11 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(17, 40);
-            textBox1.Margin = new Padding(50, 57, 50, 57);
+            textBox1.Location = new Point(17, 35);
+            textBox1.Margin = new Padding(50);
             textBox1.Name = "textBox1";
             textBox1.RightToLeft = RightToLeft.Yes;
-            textBox1.Size = new Size(366, 25);
+            textBox1.Size = new Size(366, 23);
             textBox1.TabIndex = 0;
             textBox1.Text = "1:02:30";
             textBox1.TextAlign = HorizontalAlignment.Center;
@@ -257,9 +259,9 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(794, 612);
+            ClientSize = new Size(794, 540);
             Controls.Add(panel1);
             Controls.Add(ProjectList);
             Controls.Add(treeView1);
@@ -288,8 +290,8 @@
         private ColumnHeader Czas;
         private Panel panel1;
         private TextBox textBox1;
-        private Button button3;
-        private Button button2;
+        private Button Przerwa_btn;
+        private Button Stop_btn;
         private Button Start_btn;
         private Label label1;
         private ToolStripMenuItem zmieńNazwęToolStripMenuItem;
