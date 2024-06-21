@@ -124,5 +124,10 @@ namespace Projekt_IO_3
                 _elapsedTime = DateTime.Now - _startTime; // Zapisanie upływającego czasu przy pauzie
             }
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AplikacjaIO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f1ecea13ec1fa1df46a289956a97c303169479a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35b8ad6475088231c4a59235b64ce205b9215887")]
 [assembly: System.Reflection.AssemblyProductAttribute("AplikacjaIO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AplikacjaIO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
