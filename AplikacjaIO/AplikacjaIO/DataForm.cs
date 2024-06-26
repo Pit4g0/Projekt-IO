@@ -15,26 +15,35 @@ using AplikacjaIO.Klasy;
 
 namespace AplikacjaIO
 {
-    
+
     public partial class DataForm : Form
     {
         public DataForm()
         {
             InitializeComponent();
+            LoadProjectNames();
         }
-       
+
+        private void LoadProjectNames()
+        {
+            if (GlobalData.ListValues != null)
+            {
+                Projekty_comboBox.Items.AddRange(GlobalData.ListValues.ToArray());
+            }
+        }
+
         private void AddData_btn_Click(object sender, EventArgs e)
         {
-           
+
             string projectName = NewData_tb.Text;
             string table = "Projekty";
 
             //"using" tworzy obiekt i usuwa go od razu po wykonaniu klamer
             using (DataBase dataBase = new DataBase())
             {
-                dataBase.AddToDataBase(projectName, table);
+                dataBase.AddProject(projectName, table);
             }
-            
+
         }
 
         private void Cancel_btn_Click(object sender, EventArgs e)
@@ -43,6 +52,11 @@ namespace AplikacjaIO
         }
 
         private void NewData_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Projekty_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

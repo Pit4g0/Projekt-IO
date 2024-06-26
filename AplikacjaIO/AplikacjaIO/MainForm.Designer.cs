@@ -29,16 +29,23 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode1 = new TreeNode("Ostatnie");
-            TreeNode treeNode2 = new TreeNode("Praca");
-            TreeNode treeNode3 = new TreeNode("Rozrywka");
-            TreeNode treeNode4 = new TreeNode("Archiwum");
+            ListViewItem listViewItem3 = new ListViewItem("Praca");
+            ListViewItem listViewItem4 = new ListViewItem("Szkoła");
             menuStrip1 = new MenuStrip();
             plikToolStripMenuItem = new ToolStripMenuItem();
             NewProject_menu = new ToolStripMenuItem();
+            ProjektDodajToolStrip = new ToolStripMenuItem();
+            ProjektUsunToolStrip = new ToolStripMenuItem();
             noweZadanieToolStripMenuItem = new ToolStripMenuItem();
+            ZadanieDodajToolStrip = new ToolStripMenuItem();
+            ZadanieUsunToolStrip = new ToolStripMenuItem();
+            nowaCzynnoscToolStripMenuItem = new ToolStripMenuItem();
+            CzynnoscDodajToolStrip = new ToolStripMenuItem();
+            CzynnoscUsunToolStrip = new ToolStripMenuItem();
             generujRaportToolStripMenuItem = new ToolStripMenuItem();
-            nowyProjektToolStripMenuItem1 = new ToolStripMenuItem();
+            nowaKategoriaToolStripMenuItem = new ToolStripMenuItem();
+            KategoriaDodajToolStrip = new ToolStripMenuItem();
+            KategorieUsunToolStrip = new ToolStripMenuItem();
             edycjaToolStripMenuItem = new ToolStripMenuItem();
             zmieńNazwęToolStripMenuItem = new ToolStripMenuItem();
             usuńToolStripMenuItem = new ToolStripMenuItem();
@@ -54,20 +61,22 @@
             label1 = new Label();
             panel1 = new Panel();
             panel4 = new Panel();
-            listView3 = new ListView();
+            CzynnoscList = new ListView();
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             textBox4 = new TextBox();
             panel3 = new Panel();
-            listView2 = new ListView();
+            ZadanieList = new ListView();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             textBox3 = new TextBox();
             panel2 = new Panel();
             textBox2 = new TextBox();
-            listView1 = new ListView();
+            ProjektList = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
+            KategorieList = new ListView();
+            KategorieBox = new TextBox();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -82,107 +91,165 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(940, 25);
+            menuStrip1.Size = new Size(941, 27);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // plikToolStripMenuItem
             // 
-            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewProject_menu, noweZadanieToolStripMenuItem, generujRaportToolStripMenuItem, nowyProjektToolStripMenuItem1 });
+            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewProject_menu, noweZadanieToolStripMenuItem, nowaCzynnoscToolStripMenuItem, generujRaportToolStripMenuItem, nowaKategoriaToolStripMenuItem });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            plikToolStripMenuItem.Size = new Size(38, 19);
+            plikToolStripMenuItem.Size = new Size(39, 21);
             plikToolStripMenuItem.Text = "Plik";
             // 
             // NewProject_menu
             // 
+            NewProject_menu.DropDownItems.AddRange(new ToolStripItem[] { ProjektDodajToolStrip, ProjektUsunToolStrip });
             NewProject_menu.Name = "NewProject_menu";
-            NewProject_menu.Size = new Size(150, 22);
-            NewProject_menu.Text = "Nowy projekt";
+            NewProject_menu.Size = new Size(168, 22);
+            NewProject_menu.Text = "Nowy Projekt";
             NewProject_menu.Click += NewProject_menu_Click;
+            // 
+            // ProjektDodajToolStrip
+            // 
+            ProjektDodajToolStrip.Name = "ProjektDodajToolStrip";
+            ProjektDodajToolStrip.Size = new Size(111, 22);
+            ProjektDodajToolStrip.Text = "Dodaj";
+            ProjektDodajToolStrip.Click += ProjektDodajToolStrip_Click;
+            // 
+            // ProjektUsunToolStrip
+            // 
+            ProjektUsunToolStrip.Name = "ProjektUsunToolStrip";
+            ProjektUsunToolStrip.Size = new Size(111, 22);
+            ProjektUsunToolStrip.Text = "Usuń";
+            ProjektUsunToolStrip.Click += ProjektUsunToolStrip_Click;
             // 
             // noweZadanieToolStripMenuItem
             // 
+            noweZadanieToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ZadanieDodajToolStrip, ZadanieUsunToolStrip });
             noweZadanieToolStripMenuItem.Name = "noweZadanieToolStripMenuItem";
-            noweZadanieToolStripMenuItem.Size = new Size(150, 22);
-            noweZadanieToolStripMenuItem.Text = "Nowe zadanie";
+            noweZadanieToolStripMenuItem.Size = new Size(168, 22);
+            noweZadanieToolStripMenuItem.Text = "Nowe Zadanie";
+            // 
+            // ZadanieDodajToolStrip
+            // 
+            ZadanieDodajToolStrip.Name = "ZadanieDodajToolStrip";
+            ZadanieDodajToolStrip.Size = new Size(111, 22);
+            ZadanieDodajToolStrip.Text = "Dodaj";
+            ZadanieDodajToolStrip.Click += ZadanieDodajToolStrip_Click;
+            // 
+            // ZadanieUsunToolStrip
+            // 
+            ZadanieUsunToolStrip.Name = "ZadanieUsunToolStrip";
+            ZadanieUsunToolStrip.Size = new Size(111, 22);
+            ZadanieUsunToolStrip.Text = "usuń";
+            ZadanieUsunToolStrip.Click += ZadanieUsunToolStrip_Click;
+            // 
+            // nowaCzynnoscToolStripMenuItem
+            // 
+            nowaCzynnoscToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CzynnoscDodajToolStrip, CzynnoscUsunToolStrip });
+            nowaCzynnoscToolStripMenuItem.Name = "nowaCzynnoscToolStripMenuItem";
+            nowaCzynnoscToolStripMenuItem.Size = new Size(168, 22);
+            nowaCzynnoscToolStripMenuItem.Text = "Nowa Czynność";
+            // 
+            // CzynnoscDodajToolStrip
+            // 
+            CzynnoscDodajToolStrip.Name = "CzynnoscDodajToolStrip";
+            CzynnoscDodajToolStrip.Size = new Size(111, 22);
+            CzynnoscDodajToolStrip.Text = "Dodaj";
+            CzynnoscDodajToolStrip.Click += CzynnoscDodajToolStrip_Click;
+            // 
+            // CzynnoscUsunToolStrip
+            // 
+            CzynnoscUsunToolStrip.Name = "CzynnoscUsunToolStrip";
+            CzynnoscUsunToolStrip.Size = new Size(111, 22);
+            CzynnoscUsunToolStrip.Text = "Usuń";
+            CzynnoscUsunToolStrip.Click += CzynnoscUsunToolStrip_Click;
             // 
             // generujRaportToolStripMenuItem
             // 
             generujRaportToolStripMenuItem.Name = "generujRaportToolStripMenuItem";
-            generujRaportToolStripMenuItem.Size = new Size(150, 22);
+            generujRaportToolStripMenuItem.Size = new Size(168, 22);
             generujRaportToolStripMenuItem.Text = "Generuj raport";
             // 
-            // nowyProjektToolStripMenuItem1
+            // nowaKategoriaToolStripMenuItem
             // 
-            nowyProjektToolStripMenuItem1.Name = "nowyProjektToolStripMenuItem1";
-            nowyProjektToolStripMenuItem1.Size = new Size(150, 22);
-            nowyProjektToolStripMenuItem1.Text = "Nowy projekt";
+            nowaKategoriaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { KategoriaDodajToolStrip, KategorieUsunToolStrip });
+            nowaKategoriaToolStripMenuItem.Name = "nowaKategoriaToolStripMenuItem";
+            nowaKategoriaToolStripMenuItem.Size = new Size(168, 22);
+            nowaKategoriaToolStripMenuItem.Text = "Kategorie";
+            nowaKategoriaToolStripMenuItem.Click += nowaKategoriaToolStripMenuItem_Click;
+            // 
+            // KategoriaDodajToolStrip
+            // 
+            KategoriaDodajToolStrip.Name = "KategoriaDodajToolStrip";
+            KategoriaDodajToolStrip.Size = new Size(111, 22);
+            KategoriaDodajToolStrip.Text = "Dodaj";
+            KategoriaDodajToolStrip.Click += KategoriaDodajToolStrip_Click;
+            // 
+            // KategorieUsunToolStrip
+            // 
+            KategorieUsunToolStrip.Name = "KategorieUsunToolStrip";
+            KategorieUsunToolStrip.Size = new Size(111, 22);
+            KategorieUsunToolStrip.Text = "Usuń";
+            KategorieUsunToolStrip.Click += KategorieUsunToolStrip_Click;
             // 
             // edycjaToolStripMenuItem
             // 
             edycjaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { zmieńNazwęToolStripMenuItem, usuńToolStripMenuItem, archiwizujToolStripMenuItem });
             edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
-            edycjaToolStripMenuItem.Size = new Size(53, 19);
+            edycjaToolStripMenuItem.Size = new Size(57, 21);
             edycjaToolStripMenuItem.Text = "Edycja";
             edycjaToolStripMenuItem.Click += edycjaToolStripMenuItem_Click;
             // 
             // zmieńNazwęToolStripMenuItem
             // 
             zmieńNazwęToolStripMenuItem.Name = "zmieńNazwęToolStripMenuItem";
-            zmieńNazwęToolStripMenuItem.Size = new Size(144, 22);
+            zmieńNazwęToolStripMenuItem.Size = new Size(151, 22);
             zmieńNazwęToolStripMenuItem.Text = "Zmień nazwę";
             // 
             // usuńToolStripMenuItem
             // 
             usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            usuńToolStripMenuItem.Size = new Size(144, 22);
+            usuńToolStripMenuItem.Size = new Size(151, 22);
             usuńToolStripMenuItem.Text = "Usuń";
             // 
             // archiwizujToolStripMenuItem
             // 
             archiwizujToolStripMenuItem.Name = "archiwizujToolStripMenuItem";
-            archiwizujToolStripMenuItem.Size = new Size(144, 22);
+            archiwizujToolStripMenuItem.Size = new Size(151, 22);
             archiwizujToolStripMenuItem.Text = "Archiwizuj";
             // 
             // widokToolStripMenuItem
             // 
             widokToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pełnyEkranToolStripMenuItem });
             widokToolStripMenuItem.Name = "widokToolStripMenuItem";
-            widokToolStripMenuItem.Size = new Size(53, 19);
+            widokToolStripMenuItem.Size = new Size(57, 21);
             widokToolStripMenuItem.Text = "Widok";
             // 
             // pełnyEkranToolStripMenuItem
             // 
             pełnyEkranToolStripMenuItem.Name = "pełnyEkranToolStripMenuItem";
-            pełnyEkranToolStripMenuItem.Size = new Size(135, 22);
+            pełnyEkranToolStripMenuItem.Size = new Size(142, 22);
             pełnyEkranToolStripMenuItem.Text = "Pełny ekran";
             // 
             // treeView1
             // 
             treeView1.Dock = DockStyle.Left;
-            treeView1.Location = new Point(0, 25);
+            treeView1.Location = new Point(0, 27);
             treeView1.Name = "treeView1";
-            treeNode1.Name = "Węzeł0";
-            treeNode1.Text = "Ostatnie";
-            treeNode2.Name = "Projekt01";
-            treeNode2.Text = "Praca";
-            treeNode3.Name = "Węzeł2";
-            treeNode3.Text = "Rozrywka";
-            treeNode4.Name = "Węzeł3";
-            treeNode4.Text = "Archiwum";
-            treeView1.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode2, treeNode3, treeNode4 });
-            treeView1.Size = new Size(121, 577);
+            treeView1.Size = new Size(121, 507);
             treeView1.TabIndex = 1;
             treeView1.AfterSelect += treeView1_AfterSelect;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(648, 50);
-            textBox1.Margin = new Padding(50);
+            textBox1.Location = new Point(654, 180);
+            textBox1.Margin = new Padding(50, 57, 50, 57);
             textBox1.Name = "textBox1";
             textBox1.RightToLeft = RightToLeft.Yes;
-            textBox1.Size = new Size(117, 23);
+            textBox1.Size = new Size(117, 25);
             textBox1.TabIndex = 5;
             textBox1.Text = "1:02:30";
             textBox1.TextAlign = HorizontalAlignment.Center;
@@ -190,9 +257,9 @@
             // Start_btn
             // 
             Start_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Start_btn.Location = new Point(648, 86);
+            Start_btn.Location = new Point(654, 220);
             Start_btn.Name = "Start_btn";
-            Start_btn.Size = new Size(117, 23);
+            Start_btn.Size = new Size(117, 26);
             Start_btn.TabIndex = 6;
             Start_btn.Text = "Start";
             Start_btn.UseVisualStyleBackColor = true;
@@ -200,9 +267,9 @@
             // Stop_btn
             // 
             Stop_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Stop_btn.Location = new Point(648, 115);
+            Stop_btn.Location = new Point(654, 253);
             Stop_btn.Name = "Stop_btn";
-            Stop_btn.Size = new Size(117, 23);
+            Stop_btn.Size = new Size(117, 26);
             Stop_btn.TabIndex = 7;
             Stop_btn.Text = "Stop";
             Stop_btn.UseVisualStyleBackColor = true;
@@ -210,9 +277,9 @@
             // Przerwa_btn
             // 
             Przerwa_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Przerwa_btn.Location = new Point(648, 144);
+            Przerwa_btn.Location = new Point(654, 286);
             Przerwa_btn.Name = "Przerwa_btn";
-            Przerwa_btn.Size = new Size(117, 23);
+            Przerwa_btn.Size = new Size(117, 26);
             Przerwa_btn.TabIndex = 8;
             Przerwa_btn.Text = "Przerwa";
             Przerwa_btn.UseVisualStyleBackColor = true;
@@ -221,9 +288,9 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(681, 24);
+            label1.Location = new Point(687, 150);
             label1.Name = "label1";
-            label1.Size = new Size(56, 15);
+            label1.Size = new Size(62, 17);
             label1.TabIndex = 9;
             label1.Text = "Projekt01";
             // 
@@ -238,31 +305,32 @@
             panel1.Controls.Add(Start_btn);
             panel1.Controls.Add(textBox1);
             panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(121, 25);
+            panel1.Location = new Point(121, 27);
             panel1.Name = "panel1";
-            panel1.Size = new Size(835, 577);
+            panel1.Size = new Size(835, 507);
             panel1.TabIndex = 7;
+            panel1.Paint += panel1_Paint;
             // 
             // panel4
             // 
-            panel4.Controls.Add(listView3);
+            panel4.Controls.Add(CzynnoscList);
             panel4.Controls.Add(textBox4);
             panel4.Dock = DockStyle.Left;
             panel4.Location = new Point(395, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(200, 577);
+            panel4.Size = new Size(200, 507);
             panel4.TabIndex = 12;
             // 
-            // listView3
+            // CzynnoscList
             // 
-            listView3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            listView3.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6 });
-            listView3.Location = new Point(0, 21);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(200, 556);
-            listView3.TabIndex = 4;
-            listView3.UseCompatibleStateImageBehavior = false;
-            listView3.View = View.Details;
+            CzynnoscList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            CzynnoscList.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6 });
+            CzynnoscList.Location = new Point(0, 24);
+            CzynnoscList.Name = "CzynnoscList";
+            CzynnoscList.Size = new Size(200, 483);
+            CzynnoscList.TabIndex = 4;
+            CzynnoscList.UseCompatibleStateImageBehavior = false;
+            CzynnoscList.View = View.Details;
             // 
             // columnHeader5
             // 
@@ -279,31 +347,31 @@
             textBox4.Dock = DockStyle.Top;
             textBox4.Location = new Point(0, 0);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 23);
+            textBox4.Size = new Size(200, 25);
             textBox4.TabIndex = 3;
             textBox4.Text = "Czynności";
             textBox4.TextAlign = HorizontalAlignment.Center;
             // 
             // panel3
             // 
-            panel3.Controls.Add(listView2);
+            panel3.Controls.Add(ZadanieList);
             panel3.Controls.Add(textBox3);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(195, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(200, 577);
+            panel3.Size = new Size(200, 507);
             panel3.TabIndex = 11;
             // 
-            // listView2
+            // ZadanieList
             // 
-            listView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader3, columnHeader4 });
-            listView2.Location = new Point(0, 21);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(200, 556);
-            listView2.TabIndex = 3;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
+            ZadanieList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            ZadanieList.Columns.AddRange(new ColumnHeader[] { columnHeader3, columnHeader4 });
+            ZadanieList.Location = new Point(0, 24);
+            ZadanieList.Name = "ZadanieList";
+            ZadanieList.Size = new Size(200, 483);
+            ZadanieList.TabIndex = 3;
+            ZadanieList.UseCompatibleStateImageBehavior = false;
+            ZadanieList.View = View.Details;
             // 
             // columnHeader3
             // 
@@ -320,7 +388,7 @@
             textBox3.Dock = DockStyle.Top;
             textBox3.Location = new Point(0, 0);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 23);
+            textBox3.Size = new Size(200, 25);
             textBox3.TabIndex = 2;
             textBox3.Text = "Zadania";
             textBox3.TextAlign = HorizontalAlignment.Center;
@@ -328,11 +396,11 @@
             // panel2
             // 
             panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(listView1);
+            panel2.Controls.Add(ProjektList);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(195, 577);
+            panel2.Size = new Size(195, 507);
             panel2.TabIndex = 10;
             // 
             // textBox2
@@ -340,22 +408,22 @@
             textBox2.Dock = DockStyle.Top;
             textBox2.Location = new Point(0, 0);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(195, 23);
+            textBox2.Size = new Size(195, 25);
             textBox2.TabIndex = 1;
             textBox2.Text = "Projekty";
             textBox2.TextAlign = HorizontalAlignment.Center;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
-            // listView1
+            // ProjektList
             // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
-            listView1.Location = new Point(0, 21);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(195, 556);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            ProjektList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            ProjektList.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
+            ProjektList.Location = new Point(0, 24);
+            ProjektList.Name = "ProjektList";
+            ProjektList.Size = new Size(195, 483);
+            ProjektList.TabIndex = 0;
+            ProjektList.UseCompatibleStateImageBehavior = false;
+            ProjektList.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -367,11 +435,32 @@
             columnHeader2.Text = "Czas";
             columnHeader2.Width = 95;
             // 
+            // KategorieList
+            // 
+            KategorieList.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4 });
+            KategorieList.Location = new Point(1, 51);
+            KategorieList.Name = "KategorieList";
+            KategorieList.Size = new Size(121, 628);
+            KategorieList.TabIndex = 8;
+            KategorieList.UseCompatibleStateImageBehavior = false;
+            KategorieList.View = View.SmallIcon;
+            // 
+            // KategorieBox
+            // 
+            KategorieBox.Location = new Point(1, 27);
+            KategorieBox.Name = "KategorieBox";
+            KategorieBox.Size = new Size(121, 25);
+            KategorieBox.TabIndex = 9;
+            KategorieBox.Text = "Kategorie";
+            KategorieBox.TextAlign = HorizontalAlignment.Center;
+            // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(940, 602);
+            ClientSize = new Size(941, 534);
+            Controls.Add(KategorieBox);
+            Controls.Add(KategorieList);
             Controls.Add(panel1);
             Controls.Add(treeView1);
             Controls.Add(menuStrip1);
@@ -407,7 +496,6 @@
         private ToolStripMenuItem noweZadanieToolStripMenuItem;
         private ToolStripMenuItem generujRaportToolStripMenuItem;
         private ToolStripMenuItem pełnyEkranToolStripMenuItem;
-        private ToolStripMenuItem nowyProjektToolStripMenuItem1;
         private TextBox textBox1;
         private Button Start_btn;
         private Button Stop_btn;
@@ -418,16 +506,28 @@
         private Panel panel3;
         private Panel panel2;
         private TextBox textBox2;
-        private ListView listView1;
+        private ListView ProjektList;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
-        private ListView listView3;
+        private ListView CzynnoscList;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
         private TextBox textBox4;
-        private ListView listView2;
+        private ListView ZadanieList;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private TextBox textBox3;
+        private ListView KategorieList;
+        private TextBox KategorieBox;
+        private ToolStripMenuItem nowaCzynnoscToolStripMenuItem;
+        private ToolStripMenuItem nowaKategoriaToolStripMenuItem;
+        private ToolStripMenuItem KategoriaDodajToolStrip;
+        private ToolStripMenuItem KategorieUsunToolStrip;
+        private ToolStripMenuItem ProjektDodajToolStrip;
+        private ToolStripMenuItem ProjektUsunToolStrip;
+        private ToolStripMenuItem ZadanieDodajToolStrip;
+        private ToolStripMenuItem ZadanieUsunToolStrip;
+        private ToolStripMenuItem CzynnoscDodajToolStrip;
+        private ToolStripMenuItem CzynnoscUsunToolStrip;
     }
 }

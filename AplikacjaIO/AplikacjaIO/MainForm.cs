@@ -21,20 +21,55 @@ namespace Projekt_IO_3
             _timer = new System.Windows.Forms.Timer();
             _timer.Interval = 1000; // 1 sekunda
             _timer.Tick += Timer_Tick;
-            //LoadProjectNames();
+            LoadProjectList();
+            LoadKategorieList();
+            LoadZadanieList();
+            LoadCzynnoscList();
         }
 
-        //private void LoadProjectNames()
-        //{
-        //    DataBase dataBase = new DataBase();
-        //    List<string> projectNames = dataBase.GetAllNames();
-        //    foreach (string projectName in projectNames)
-        //    {
-        //        ListViewItem item = new ListViewItem(projectName);
-        //        // Jeśli masz inne kolumny do wypełnienia, użyj item.SubItems.Add
-        //        ProjectList.Items.Add(item);
-        //    }         
-        //}
+        private void LoadProjectList()
+        {
+            DataBase dataBase = new DataBase();
+            List<string> projectNames = dataBase.GetProjekt();
+            foreach (string projectName in projectNames)
+            {
+                ListViewItem item = new ListViewItem(projectName);
+                ProjektList.Items.Add(item);
+            }
+        }
+        private void LoadZadanieList()
+        {
+            DataBase dataBase = new DataBase();
+            List<string> zadanieNames = dataBase.GetZadanie();
+            foreach (string zadanieName in zadanieNames)
+            {
+                ListViewItem item = new ListViewItem(zadanieName);
+                ZadanieList.Items.Add(item);
+            }
+        }
+        private void LoadCzynnoscList()
+        {
+            DataBase dataBase = new DataBase();
+            List<string> czynnoscNames = dataBase.GetCzynnosc();
+            foreach (string czynnoscName in czynnoscNames)
+            {
+                ListViewItem item = new ListViewItem(czynnoscName);
+                CzynnoscList.Items.Add(item);
+            }
+        }
+        private void LoadKategorieList()
+        {
+            using (DataBase dataBase = new DataBase())
+            {
+                List<string> kategorieList = dataBase.GetKategorie();
+
+                KategorieList.Items.Clear();
+                foreach (string kategoria in kategorieList)
+                {
+                    KategorieList.Items.Add(new ListViewItem(kategoria));
+                }
+            }
+        }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -98,8 +133,7 @@ namespace Projekt_IO_3
 
         private void NewProject_menu_Click(object sender, EventArgs e)
         {
-            //DataForm dataForm = new DataForm();
-            //dataForm.ShowDialog(this);
+
         }
 
 
@@ -128,6 +162,92 @@ namespace Projekt_IO_3
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void nowaKategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KategoriaDodajToolStrip_Click(object sender, EventArgs e)
+        {
+          
+            LoadKategorieList();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void KategorieUsunToolStrip_Click(object sender, EventArgs e)
+        {
+            // Przekazywanie wartości z ListView (KategorieList) do GlobalData.ListValues
+          
+            DeleteForm delete = new DeleteForm();
+            delete.ShowDialog(this);
+        }
+
+        private void ProjektUsunToolStrip_Click(object sender, EventArgs e)
+        {
+            // Przekazywanie wartości z ListView (KategorieList) do GlobalData.ListValues
+            DataBase dataBase = new DataBase();
+            List<string> projektList = dataBase.GetProjekt();
+
+            // Przypisz wartości do GlobalData.ListValues
+            GlobalData.ListValues = projektList;
+
+            DeleteForm delete = new DeleteForm();
+            delete.ShowDialog(this);
+        }
+
+        private void ZadanieUsunToolStrip_Click(object sender, EventArgs e)
+        {
+            DataBase dataBase = new DataBase();
+            List<string> zadanieList = dataBase.GetZadanie();
+
+            // Przypisz wartości do GlobalData.ListValues
+            GlobalData.ListValues = zadanieList;
+
+            DeleteForm delete = new DeleteForm();
+            delete.ShowDialog(this);
+        }
+
+        private void CzynnoscUsunToolStrip_Click(object sender, EventArgs e)
+        {
+            
+                DataBase dataBase = new DataBase();
+                List<string> czynnosciList = dataBase.GetCzynnosc();
+
+                // Przypisz wartości do GlobalData.ListValues
+                GlobalData.ListValues = czynnosciList;
+
+
+                DeleteForm delete = new DeleteForm();
+                delete.ShowDialog(this);
+            
+        }
+        private void ProjektDodajToolStrip_Click(object sender, EventArgs e)
+        {
+          
+            ProjektForm projekt = new ProjektForm();
+            projekt.ShowDialog(this);
+            LoadProjectList();
+        }
+
+        private void ZadanieDodajToolStrip_Click(object sender, EventArgs e)
+        {
+          
+            ZadanieForm zadanie = new ZadanieForm();
+            zadanie.ShowDialog(this);
+            LoadZadanieList();
+        }
+
+        private void CzynnoscDodajToolStrip_Click(object sender, EventArgs e)
+        {
+          
+            CzynnoscForm czynnosc = new CzynnoscForm();
+            czynnosc.ShowDialog(this);
+           
         }
     }
 }

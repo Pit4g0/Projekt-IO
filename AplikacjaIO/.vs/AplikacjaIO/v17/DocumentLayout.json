@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\",
+  "WorkspaceRootPath": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\projekt\\projekt-io\\aplikacjaio\\aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\projekt\\projekt-io\\aplikacjaio\\aplikacjaio\\projektform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\projektform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\repo\\projekt-io\\aplikacjaio\\aplikacjaio\\klasy\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\projekt\\projekt-io\\aplikacjaio\\aplikacjaio\\projektform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\projektform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\projekt\\projekt-io\\aplikacjaio\\aplikacjaio\\klasy\\globaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\klasy\\globaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|d:\\dane_z_kompa\\zaj\u0119cia\\studia\\in\u017Cynieria_oprogramowania\\projekt\\projekt-io\\aplikacjaio\\aplikacjaio\\klasy\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\klasy\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\aplikacjaio\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6B93C4EE-BE6D-4D50-9759-CAE147E32205}|AplikacjaIO\\AplikacjaIO.csproj|solutionrelative:aplikacjaio\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,78 +34,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
-              "RelativeDocumentMoniker": "AplikacjaIO\\MainForm.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs [Design]",
-              "RelativeToolTip": "AplikacjaIO\\MainForm.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "GlobalData.cs",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\GlobalData.cs",
+              "RelativeDocumentMoniker": "AplikacjaIO\\Klasy\\GlobalData.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\GlobalData.cs",
+              "RelativeToolTip": "AplikacjaIO\\Klasy\\GlobalData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T13:37:25.828Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-26T20:11:29.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjektForm.cs [Projekt]",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\ProjektForm.cs",
+              "RelativeDocumentMoniker": "AplikacjaIO\\ProjektForm.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\ProjektForm.cs [Projekt]",
+              "RelativeToolTip": "AplikacjaIO\\ProjektForm.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:08:56.675Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjektForm.cs",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\ProjektForm.cs",
+              "RelativeDocumentMoniker": "AplikacjaIO\\ProjektForm.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\ProjektForm.cs",
+              "RelativeToolTip": "AplikacjaIO\\ProjektForm.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAywCUAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:09:13.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DataForm.cs [Projekt]",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\DataForm.cs",
-              "RelativeDocumentMoniker": "AplikacjaIO\\DataForm.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\DataForm.cs [Projekt]",
-              "RelativeToolTip": "AplikacjaIO\\DataForm.cs [Projekt]",
+              "Title": "MainForm.cs [Projekt]",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
+              "RelativeDocumentMoniker": "AplikacjaIO\\MainForm.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs [Projekt]",
+              "RelativeToolTip": "AplikacjaIO\\MainForm.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:03:48.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataForm.cs",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\DataForm.cs",
-              "RelativeDocumentMoniker": "AplikacjaIO\\DataForm.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\DataForm.cs",
-              "RelativeToolTip": "AplikacjaIO\\DataForm.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAADwvzIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:05:11.949Z"
+              "WhenOpened": "2024-06-14T13:37:25.828Z",
+              "EditorCaption": " [Projekt]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
               "RelativeDocumentMoniker": "AplikacjaIO\\MainForm.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\MainForm.cs",
               "RelativeToolTip": "AplikacjaIO\\MainForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAoAAAA",
+              "ViewState": "AQIAALQAAAAAAAAAAAAAwMQAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T10:01:47.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Program.cs",
-              "RelativeDocumentMoniker": "AplikacjaIO\\Program.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Program.cs",
-              "RelativeToolTip": "AplikacjaIO\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T10:01:24.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DataBase.cs",
-              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\DataBase.cs",
+              "DocumentMoniker": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\DataBase.cs",
               "RelativeDocumentMoniker": "AplikacjaIO\\Klasy\\DataBase.cs",
-              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Repo\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\DataBase.cs",
+              "ToolTip": "D:\\dane_z_kompa\\zaj\u0119cia\\studia\\In\u017Cynieria_Oprogramowania\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\Klasy\\DataBase.cs",
               "RelativeToolTip": "AplikacjaIO\\Klasy\\DataBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAApAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA3wHsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T19:08:38.753Z",
               "EditorCaption": ""
