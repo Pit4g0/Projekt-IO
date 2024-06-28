@@ -21,6 +21,7 @@ namespace Projekt_IO_3
             _timer = new System.Windows.Forms.Timer();
             _timer.Interval = 1000; // 1 sekunda
             _timer.Tick += Timer_Tick;
+<<<<<<< Updated upstream
             LoadProjectList();
             LoadKategorieList();
             LoadZadanieList();
@@ -70,7 +71,74 @@ namespace Projekt_IO_3
                 }
             }
         }
+=======
+            LoadKategorieList();
+            //LoadZadanieList();
+            LoadCzynnoscList();
+            this.KategorieList.SelectedIndexChanged += new System.EventHandler(this.KategorieList_SelectedIndexChanged);
+            this.ProjektList.SelectedIndexChanged += new System.EventHandler(this.ProjektList_SelectedIndexChanged);
+            this.ZadanieList.SelectedIndexChanged += new System.EventHandler(this.ZadanieList_SelectedIndexChanged);
+        }
+        private void LoadCzynnoscList()
+        {
+            DataBase dataBase = new DataBase();
+            List<string> czynnoscNames = dataBase.GetCzynnosc();
+            foreach (string czynnoscName in czynnoscNames)
+            {
+                ListViewItem item = new ListViewItem(czynnoscName);
+                CzynnoscList.Items.Add(item);
+            }
+        }
+        private void LoadKategorieList()
+        {
+            using (DataBase dataBase = new DataBase())
+            {
+                List<string> kategorieList = dataBase.GetKategorie();
 
+                KategorieList.Items.Clear();
+                foreach (string kategoria in kategorieList)
+                {
+                    KategorieList.Items.Add(new ListViewItem(kategoria));
+                }
+            }
+        }
+        private void LoadCzynnosciByTask(string taskName)
+        {
+            DataBase dataBase = new DataBase();
+            List<string> czynnosci = dataBase.GetCzynnosciByTask(taskName);
+
+            CzynnoscList.Items.Clear();
+            foreach (string czynnosc in czynnosci)
+            {
+                ListViewItem item = new ListViewItem(czynnosc);
+                CzynnoscList.Items.Add(item);
+            }
+        }
+
+        private void LoadProjektyByKategoria(string category)
+        {
+            DataBase dataBase = new DataBase();
+            List<string> projects = dataBase.GetProjektyByKategoria(category);
+>>>>>>> Stashed changes
+
+            ProjektList.Items.Clear();
+            foreach (string project in projects)
+            {
+                ProjektList.Items.Add(project);
+            }
+        }
+        private void LoadZadaniaByProjekt(string projectName)
+        {
+            DataBase dataBase = new DataBase();
+            List<string> tasks = dataBase.GetZadaniaByProjekt(projectName);
+
+            ZadanieList.Items.Clear();
+            foreach (string task in tasks)
+            {
+                ListViewItem item = new ListViewItem(task);
+                ZadanieList.Items.Add(item);
+            }
+        }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
@@ -170,7 +238,11 @@ namespace Projekt_IO_3
 
         private void KategoriaDodajToolStrip_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
           
+=======
+
+>>>>>>> Stashed changes
             LoadKategorieList();
         }
 
@@ -182,7 +254,11 @@ namespace Projekt_IO_3
         private void KategorieUsunToolStrip_Click(object sender, EventArgs e)
         {
             // Przekazywanie wartości z ListView (KategorieList) do GlobalData.ListValues
+<<<<<<< Updated upstream
           
+=======
+
+>>>>>>> Stashed changes
             DeleteForm delete = new DeleteForm();
             delete.ShowDialog(this);
         }
@@ -214,6 +290,7 @@ namespace Projekt_IO_3
 
         private void CzynnoscUsunToolStrip_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             
                 DataBase dataBase = new DataBase();
                 List<string> czynnosciList = dataBase.GetCzynnosc();
@@ -232,22 +309,87 @@ namespace Projekt_IO_3
             ProjektForm projekt = new ProjektForm();
             projekt.ShowDialog(this);
             LoadProjectList();
+=======
+
+            DataBase dataBase = new DataBase();
+            List<string> czynnosciList = dataBase.GetCzynnosc();
+
+            // Przypisz wartości do GlobalData.ListValues
+            GlobalData.ListValues = czynnosciList;
+
+
+            DeleteForm delete = new DeleteForm();
+            delete.ShowDialog(this);
+
+        }
+        private void ProjektDodajToolStrip_Click(object sender, EventArgs e)
+        {
+
+            ProjektForm projekt = new ProjektForm();
+            projekt.ShowDialog(this);
+            //LoadProjectList();
+>>>>>>> Stashed changes
         }
 
         private void ZadanieDodajToolStrip_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
           
             ZadanieForm zadanie = new ZadanieForm();
             zadanie.ShowDialog(this);
             LoadZadanieList();
+=======
+
+            ZadanieForm zadanie = new ZadanieForm();
+            zadanie.ShowDialog(this);
+>>>>>>> Stashed changes
         }
 
         private void CzynnoscDodajToolStrip_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
           
             CzynnoscForm czynnosc = new CzynnoscForm();
             czynnosc.ShowDialog(this);
            
+=======
+
+            CzynnoscForm czynnosc = new CzynnoscForm();
+            czynnosc.ShowDialog(this);
+
+        }
+
+        private void KategorieList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (KategorieList.SelectedItems.Count > 0)
+            {
+                string selectedCategory = KategorieList.SelectedItems[0].Text;
+                LoadProjektyByKategoria(selectedCategory);
+            }
+            else
+            {
+                ZadanieList.Items.Clear();
+                CzynnoscList.Items.Clear();
+            }
+        }
+
+        private void ProjektList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ProjektList.SelectedItems.Count > 0)
+            {
+                string selectedProject = ProjektList.SelectedItems[0].Text;
+                LoadZadaniaByProjekt(selectedProject);
+            }
+        }
+
+        private void ZadanieList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ZadanieList.SelectedItems.Count > 0)
+            {
+                string selectedTask = ZadanieList.SelectedItems[0].Text;
+                LoadCzynnosciByTask(selectedTask);
+            }
+>>>>>>> Stashed changes
         }
     }
 }

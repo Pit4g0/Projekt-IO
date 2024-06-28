@@ -66,6 +66,41 @@ namespace AplikacjaIO.Klasy
 
             return projectNames;
         }
+<<<<<<< Updated upstream
+=======
+        public List<string> GetProjektyByKategoria(string category)
+        {
+            List<string> projectNames = new List<string>();
+
+            try
+            {
+                _sqlConnection.Open();
+                string query = "SELECT NazwaProjektu FROM Projekty WHERE PrzypisanieDoKategorii = @Category";
+                using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@Category", category);
+
+                    using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            projectNames.Add(reader["NazwaProjektu"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wystąpił błąd: " + ex.Message);
+            }
+            finally
+            {
+                _sqlConnection.Close();
+            }
+
+            return projectNames;
+        }
+>>>>>>> Stashed changes
         public void AddZadanie(string zadanieName, string projectName, string table)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
@@ -122,6 +157,40 @@ namespace AplikacjaIO.Klasy
             }
             return zadanieNames;
         }
+<<<<<<< Updated upstream
+=======
+        public List<string> GetZadaniaByProjekt(string projectName)
+        {
+            List<string> tasks = new List<string>();
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString))
+                {
+                    sqlConnection.Open();
+                    string query = "SELECT NazwaZadania FROM Zadania WHERE NadrzednyProjekt = @Projekt";
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Projekt", projectName);
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                tasks.Add(reader["NazwaZadania"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wystąpił błąd: " + ex.Message);
+            }
+
+            return tasks;
+        }
+>>>>>>> Stashed changes
         public void AddCzynnosc(string czynnoscName, string zadanieName, int czas, string table)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
@@ -179,7 +248,42 @@ namespace AplikacjaIO.Klasy
                 _sqlConnection.Close();
             }
             return czynnoscNames;
+<<<<<<< Updated upstream
         } 
+=======
+        }
+        public List<string> GetCzynnosciByTask(string taskName)
+        {
+            List<string> czynnosci = new List<string>();
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString))
+                {
+                    sqlConnection.Open();
+                    string query = "SELECT NazwaCzynnosci FROM Czynnosci WHERE NadrzedneZadanie = @Zadanie";
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Zadanie", taskName);
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                czynnosci.Add(reader["NazwaCzynnosci"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wystąpił błąd: " + ex.Message);
+            }
+
+            return czynnosci;
+        }
+>>>>>>> Stashed changes
         public void AddKategorie(string kategoriaName)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;

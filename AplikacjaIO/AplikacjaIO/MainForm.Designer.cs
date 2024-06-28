@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+<<<<<<< Updated upstream
             ListViewItem listViewItem3 = new ListViewItem("Praca");
             ListViewItem listViewItem4 = new ListViewItem("Szkoła");
+=======
+            ListViewItem listViewItem1 = new ListViewItem("Praca");
+            ListViewItem listViewItem2 = new ListViewItem("Szkoła");
+>>>>>>> Stashed changes
             menuStrip1 = new MenuStrip();
             plikToolStripMenuItem = new ToolStripMenuItem();
             NewProject_menu = new ToolStripMenuItem();
@@ -372,6 +377,10 @@
             ZadanieList.TabIndex = 3;
             ZadanieList.UseCompatibleStateImageBehavior = false;
             ZadanieList.View = View.Details;
+<<<<<<< Updated upstream
+=======
+            ZadanieList.SelectedIndexChanged += ZadanieList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // columnHeader3
             // 
@@ -424,6 +433,10 @@
             ProjektList.TabIndex = 0;
             ProjektList.UseCompatibleStateImageBehavior = false;
             ProjektList.View = View.Details;
+<<<<<<< Updated upstream
+=======
+            ProjektList.SelectedIndexChanged += ProjektList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // columnHeader1
             // 
@@ -437,13 +450,21 @@
             // 
             // KategorieList
             // 
+<<<<<<< Updated upstream
             KategorieList.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4 });
+=======
+            KategorieList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+>>>>>>> Stashed changes
             KategorieList.Location = new Point(1, 51);
             KategorieList.Name = "KategorieList";
             KategorieList.Size = new Size(121, 628);
             KategorieList.TabIndex = 8;
             KategorieList.UseCompatibleStateImageBehavior = false;
             KategorieList.View = View.SmallIcon;
+<<<<<<< Updated upstream
+=======
+            KategorieList.SelectedIndexChanged += KategorieList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // KategorieBox
             // 
