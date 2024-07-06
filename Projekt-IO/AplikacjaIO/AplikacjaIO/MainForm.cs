@@ -426,5 +426,35 @@ namespace Projekt_IO_3
             RaportForm raport = new RaportForm();
             raport.ShowDialog(this);
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel7_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer4_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }

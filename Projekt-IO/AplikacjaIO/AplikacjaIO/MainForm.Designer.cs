@@ -50,33 +50,61 @@
             archiwizujToolStripMenuItem = new ToolStripMenuItem();
             widokToolStripMenuItem = new ToolStripMenuItem();
             pełnyEkranToolStripMenuItem = new ToolStripMenuItem();
-            treeView1 = new TreeView();
             timer1 = new System.Windows.Forms.Timer(components);
-            Time_txt = new TextBox();
-            Start_btn = new Button();
-            Stop_btn = new Button();
-            Przerwa_btn = new Button();
+            splitContainer1 = new SplitContainer();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            KategorieList = new ListView();
+            label2 = new Label();
+            splitContainer2 = new SplitContainer();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            ProjektList = new ListView();
+            label3 = new Label();
+            splitContainer3 = new SplitContainer();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            ZadanieList = new ListView();
+            label4 = new Label();
+            splitContainer4 = new SplitContainer();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            CzynnoscList = new ListView();
+            label5 = new Label();
+            tableLayoutPanel7 = new TableLayoutPanel();
             label1 = new Label();
             panel1 = new Panel();
-            panel4 = new Panel();
-            CzynnoscList = new ListView();
-            columnHeader5 = new ColumnHeader();
+            Time_txt = new TextBox();
+            Przerwa_btn = new Button();
+            Stop_btn = new Button();
+            Start_btn = new Button();
+            tableLayoutPanel4 = new TableLayoutPanel();
             textBox4 = new TextBox();
-            panel3 = new Panel();
-            ZadanieList = new ListView();
-            columnHeader3 = new ColumnHeader();
-            textBox3 = new TextBox();
-            panel2 = new Panel();
+            listView4 = new ListView();
+            tableLayoutPanel2 = new TableLayoutPanel();
             textBox2 = new TextBox();
-            ProjektList = new ListView();
-            columnHeader1 = new ColumnHeader();
-            KategorieList = new ListView();
-            KategorieBox = new TextBox();
+            listView2 = new ListView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.Panel1.SuspendLayout();
+            splitContainer2.Panel2.SuspendLayout();
+            splitContainer2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
+            splitContainer3.Panel1.SuspendLayout();
+            splitContainer3.Panel2.SuspendLayout();
+            splitContainer3.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer4).BeginInit();
+            splitContainer4.Panel1.SuspendLayout();
+            splitContainer4.Panel2.SuspendLayout();
+            splitContainer4.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
             panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -86,7 +114,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(941, 27);
+            menuStrip1.Size = new Size(759, 25);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -94,28 +122,28 @@
             // 
             plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nowaKategoriaToolStripMenuItem, NewProject_menu, noweZadanieToolStripMenuItem, nowaCzynnoscToolStripMenuItem, generujRaportToolStripMenuItem });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            plikToolStripMenuItem.Size = new Size(39, 21);
+            plikToolStripMenuItem.Size = new Size(38, 19);
             plikToolStripMenuItem.Text = "Plik";
             // 
             // nowaKategoriaToolStripMenuItem
             // 
             nowaKategoriaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { KategoriaDodajToolStrip, KategorieUsunToolStrip });
             nowaKategoriaToolStripMenuItem.Name = "nowaKategoriaToolStripMenuItem";
-            nowaKategoriaToolStripMenuItem.Size = new Size(180, 22);
+            nowaKategoriaToolStripMenuItem.Size = new Size(150, 22);
             nowaKategoriaToolStripMenuItem.Text = "Kategorie";
             nowaKategoriaToolStripMenuItem.Click += nowaKategoriaToolStripMenuItem_Click;
             // 
             // KategoriaDodajToolStrip
             // 
             KategoriaDodajToolStrip.Name = "KategoriaDodajToolStrip";
-            KategoriaDodajToolStrip.Size = new Size(111, 22);
+            KategoriaDodajToolStrip.Size = new Size(105, 22);
             KategoriaDodajToolStrip.Text = "Dodaj";
             KategoriaDodajToolStrip.Click += KategoriaDodajToolStrip_Click;
             // 
             // KategorieUsunToolStrip
             // 
             KategorieUsunToolStrip.Name = "KategorieUsunToolStrip";
-            KategorieUsunToolStrip.Size = new Size(111, 22);
+            KategorieUsunToolStrip.Size = new Size(105, 22);
             KategorieUsunToolStrip.Text = "Usuń";
             KategorieUsunToolStrip.Click += KategorieUsunToolStrip_Click;
             // 
@@ -123,21 +151,21 @@
             // 
             NewProject_menu.DropDownItems.AddRange(new ToolStripItem[] { ProjektDodajToolStrip, ProjektUsunToolStrip });
             NewProject_menu.Name = "NewProject_menu";
-            NewProject_menu.Size = new Size(180, 22);
+            NewProject_menu.Size = new Size(150, 22);
             NewProject_menu.Text = "Projekty";
             NewProject_menu.Click += NewProject_menu_Click;
             // 
             // ProjektDodajToolStrip
             // 
             ProjektDodajToolStrip.Name = "ProjektDodajToolStrip";
-            ProjektDodajToolStrip.Size = new Size(111, 22);
+            ProjektDodajToolStrip.Size = new Size(105, 22);
             ProjektDodajToolStrip.Text = "Dodaj";
             ProjektDodajToolStrip.Click += ProjektDodajToolStrip_Click;
             // 
             // ProjektUsunToolStrip
             // 
             ProjektUsunToolStrip.Name = "ProjektUsunToolStrip";
-            ProjektUsunToolStrip.Size = new Size(111, 22);
+            ProjektUsunToolStrip.Size = new Size(105, 22);
             ProjektUsunToolStrip.Text = "Usuń";
             ProjektUsunToolStrip.Click += ProjektUsunToolStrip_Click;
             // 
@@ -145,20 +173,20 @@
             // 
             noweZadanieToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ZadanieDodajToolStrip, ZadanieUsunToolStrip });
             noweZadanieToolStripMenuItem.Name = "noweZadanieToolStripMenuItem";
-            noweZadanieToolStripMenuItem.Size = new Size(180, 22);
+            noweZadanieToolStripMenuItem.Size = new Size(150, 22);
             noweZadanieToolStripMenuItem.Text = "Zadania";
             // 
             // ZadanieDodajToolStrip
             // 
             ZadanieDodajToolStrip.Name = "ZadanieDodajToolStrip";
-            ZadanieDodajToolStrip.Size = new Size(111, 22);
+            ZadanieDodajToolStrip.Size = new Size(105, 22);
             ZadanieDodajToolStrip.Text = "Dodaj";
             ZadanieDodajToolStrip.Click += ZadanieDodajToolStrip_Click;
             // 
             // ZadanieUsunToolStrip
             // 
             ZadanieUsunToolStrip.Name = "ZadanieUsunToolStrip";
-            ZadanieUsunToolStrip.Size = new Size(111, 22);
+            ZadanieUsunToolStrip.Size = new Size(105, 22);
             ZadanieUsunToolStrip.Text = "usuń";
             ZadanieUsunToolStrip.Click += ZadanieUsunToolStrip_Click;
             // 
@@ -166,27 +194,27 @@
             // 
             nowaCzynnoscToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CzynnoscDodajToolStrip, CzynnoscUsunToolStrip });
             nowaCzynnoscToolStripMenuItem.Name = "nowaCzynnoscToolStripMenuItem";
-            nowaCzynnoscToolStripMenuItem.Size = new Size(180, 22);
+            nowaCzynnoscToolStripMenuItem.Size = new Size(150, 22);
             nowaCzynnoscToolStripMenuItem.Text = "Czynności";
             // 
             // CzynnoscDodajToolStrip
             // 
             CzynnoscDodajToolStrip.Name = "CzynnoscDodajToolStrip";
-            CzynnoscDodajToolStrip.Size = new Size(111, 22);
+            CzynnoscDodajToolStrip.Size = new Size(105, 22);
             CzynnoscDodajToolStrip.Text = "Dodaj";
             CzynnoscDodajToolStrip.Click += CzynnoscDodajToolStrip_Click;
             // 
             // CzynnoscUsunToolStrip
             // 
             CzynnoscUsunToolStrip.Name = "CzynnoscUsunToolStrip";
-            CzynnoscUsunToolStrip.Size = new Size(111, 22);
+            CzynnoscUsunToolStrip.Size = new Size(105, 22);
             CzynnoscUsunToolStrip.Text = "Usuń";
             CzynnoscUsunToolStrip.Click += CzynnoscUsunToolStrip_Click;
             // 
             // generujRaportToolStripMenuItem
             // 
             generujRaportToolStripMenuItem.Name = "generujRaportToolStripMenuItem";
-            generujRaportToolStripMenuItem.Size = new Size(180, 22);
+            generujRaportToolStripMenuItem.Size = new Size(150, 22);
             generujRaportToolStripMenuItem.Text = "Generuj raport";
             generujRaportToolStripMenuItem.Click += generujRaportToolStripMenuItem_Click;
             // 
@@ -194,275 +222,445 @@
             // 
             edycjaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { zmieńNazwęToolStripMenuItem, usuńToolStripMenuItem, archiwizujToolStripMenuItem });
             edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
-            edycjaToolStripMenuItem.Size = new Size(57, 21);
+            edycjaToolStripMenuItem.Size = new Size(53, 19);
             edycjaToolStripMenuItem.Text = "Edycja";
             edycjaToolStripMenuItem.Click += edycjaToolStripMenuItem_Click;
             // 
             // zmieńNazwęToolStripMenuItem
             // 
             zmieńNazwęToolStripMenuItem.Name = "zmieńNazwęToolStripMenuItem";
-            zmieńNazwęToolStripMenuItem.Size = new Size(151, 22);
+            zmieńNazwęToolStripMenuItem.Size = new Size(144, 22);
             zmieńNazwęToolStripMenuItem.Text = "Zmień nazwę";
             // 
             // usuńToolStripMenuItem
             // 
             usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            usuńToolStripMenuItem.Size = new Size(151, 22);
+            usuńToolStripMenuItem.Size = new Size(144, 22);
             usuńToolStripMenuItem.Text = "Usuń";
             // 
             // archiwizujToolStripMenuItem
             // 
             archiwizujToolStripMenuItem.Name = "archiwizujToolStripMenuItem";
-            archiwizujToolStripMenuItem.Size = new Size(151, 22);
+            archiwizujToolStripMenuItem.Size = new Size(144, 22);
             archiwizujToolStripMenuItem.Text = "Archiwizuj";
             // 
             // widokToolStripMenuItem
             // 
             widokToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pełnyEkranToolStripMenuItem });
             widokToolStripMenuItem.Name = "widokToolStripMenuItem";
-            widokToolStripMenuItem.Size = new Size(57, 21);
+            widokToolStripMenuItem.Size = new Size(53, 19);
             widokToolStripMenuItem.Text = "Widok";
             // 
             // pełnyEkranToolStripMenuItem
             // 
             pełnyEkranToolStripMenuItem.Name = "pełnyEkranToolStripMenuItem";
-            pełnyEkranToolStripMenuItem.Size = new Size(142, 22);
+            pełnyEkranToolStripMenuItem.Size = new Size(135, 22);
             pełnyEkranToolStripMenuItem.Text = "Pełny ekran";
             // 
-            // treeView1
+            // splitContainer1
             // 
-            treeView1.Dock = DockStyle.Left;
-            treeView1.Location = new Point(0, 27);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(121, 507);
-            treeView1.TabIndex = 1;
-            treeView1.AfterSelect += treeView1_AfterSelect;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 25);
+            splitContainer1.Name = "splitContainer1";
             // 
-            // Time_txt
+            // splitContainer1.Panel1
             // 
-            Time_txt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Time_txt.Location = new Point(654, 180);
-            Time_txt.Margin = new Padding(50, 57, 50, 57);
-            Time_txt.Name = "Time_txt";
-            Time_txt.RightToLeft = RightToLeft.Yes;
-            Time_txt.Size = new Size(117, 25);
-            Time_txt.TabIndex = 5;
-            Time_txt.Text = "1:02:30";
-            Time_txt.TextAlign = HorizontalAlignment.Center;
+            splitContainer1.Panel1.Controls.Add(tableLayoutPanel1);
             // 
-            // Start_btn
+            // splitContainer1.Panel2
             // 
-            Start_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Start_btn.Location = new Point(654, 220);
-            Start_btn.Name = "Start_btn";
-            Start_btn.Size = new Size(117, 26);
-            Start_btn.TabIndex = 6;
-            Start_btn.Text = "Start";
-            Start_btn.UseVisualStyleBackColor = true;
-            Start_btn.Click += Start_btn_Click;
+            splitContainer1.Panel2.Controls.Add(splitContainer2);
+            splitContainer1.Size = new Size(759, 568);
+            splitContainer1.SplitterDistance = 142;
+            splitContainer1.TabIndex = 1;
             // 
-            // Stop_btn
+            // tableLayoutPanel1
             // 
-            Stop_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Stop_btn.Location = new Point(654, 253);
-            Stop_btn.Name = "Stop_btn";
-            Stop_btn.Size = new Size(117, 26);
-            Stop_btn.TabIndex = 7;
-            Stop_btn.Text = "Stop";
-            Stop_btn.UseVisualStyleBackColor = true;
-            Stop_btn.Click += Stop_btn_Click_1;
-            // 
-            // Przerwa_btn
-            // 
-            Przerwa_btn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Przerwa_btn.Location = new Point(654, 286);
-            Przerwa_btn.Name = "Przerwa_btn";
-            Przerwa_btn.Size = new Size(117, 26);
-            Przerwa_btn.TabIndex = 8;
-            Przerwa_btn.Text = "Przerwa";
-            Przerwa_btn.UseVisualStyleBackColor = true;
-            Przerwa_btn.Click += Przerwa_btn_Click_1;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Location = new Point(687, 150);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 17);
-            label1.TabIndex = 9;
-            label1.Text = "Projekt01";
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(Przerwa_btn);
-            panel1.Controls.Add(Stop_btn);
-            panel1.Controls.Add(Start_btn);
-            panel1.Controls.Add(Time_txt);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(121, 27);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(835, 507);
-            panel1.TabIndex = 7;
-            panel1.Paint += panel1_Paint;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(CzynnoscList);
-            panel4.Controls.Add(textBox4);
-            panel4.Dock = DockStyle.Left;
-            panel4.Location = new Point(395, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 507);
-            panel4.TabIndex = 12;
-            // 
-            // CzynnoscList
-            // 
-            CzynnoscList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            CzynnoscList.Columns.AddRange(new ColumnHeader[] { columnHeader5 });
-            CzynnoscList.Location = new Point(0, 24);
-            CzynnoscList.Name = "CzynnoscList";
-            CzynnoscList.Size = new Size(200, 483);
-            CzynnoscList.TabIndex = 4;
-            CzynnoscList.UseCompatibleStateImageBehavior = false;
-            CzynnoscList.View = View.List;
-            CzynnoscList.SelectedIndexChanged += CzynnoscList_SelectedIndexChanged;
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "Nazwa";
-            columnHeader5.Width = 200;
-            // 
-            // textBox4
-            // 
-            textBox4.Dock = DockStyle.Top;
-            textBox4.Location = new Point(0, 0);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 25);
-            textBox4.TabIndex = 3;
-            textBox4.Text = "Czynności";
-            textBox4.TextAlign = HorizontalAlignment.Center;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(ZadanieList);
-            panel3.Controls.Add(textBox3);
-            panel3.Dock = DockStyle.Left;
-            panel3.Location = new Point(195, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(200, 507);
-            panel3.TabIndex = 11;
-            // 
-            // ZadanieList
-            // 
-            ZadanieList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            ZadanieList.Columns.AddRange(new ColumnHeader[] { columnHeader3 });
-            ZadanieList.Location = new Point(0, 24);
-            ZadanieList.Name = "ZadanieList";
-            ZadanieList.Size = new Size(200, 483);
-            ZadanieList.TabIndex = 3;
-            ZadanieList.UseCompatibleStateImageBehavior = false;
-            ZadanieList.View = View.List;
-            ZadanieList.SelectedIndexChanged += ZadanieList_SelectedIndexChanged;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Nazwa";
-            columnHeader3.Width = 200;
-            // 
-            // textBox3
-            // 
-            textBox3.Dock = DockStyle.Top;
-            textBox3.Location = new Point(0, 0);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 25);
-            textBox3.TabIndex = 2;
-            textBox3.Text = "Zadania";
-            textBox3.TextAlign = HorizontalAlignment.Center;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(ProjektList);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(195, 507);
-            panel2.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            textBox2.Dock = DockStyle.Top;
-            textBox2.Location = new Point(0, 0);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(195, 25);
-            textBox2.TabIndex = 1;
-            textBox2.Text = "Projekty";
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // ProjektList
-            // 
-            ProjektList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            ProjektList.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
-            ProjektList.Location = new Point(0, 24);
-            ProjektList.Name = "ProjektList";
-            ProjektList.Size = new Size(195, 483);
-            ProjektList.TabIndex = 0;
-            ProjektList.UseCompatibleStateImageBehavior = false;
-            ProjektList.SelectedIndexChanged += ProjektList_SelectedIndexChanged;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "";
-            columnHeader1.Width = 200;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(KategorieList, 0, 1);
+            tableLayoutPanel1.Controls.Add(label2, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 5.660377F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 94.33963F));
+            tableLayoutPanel1.Size = new Size(142, 568);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // KategorieList
             // 
-            KategorieList.Location = new Point(1, 51);
+            KategorieList.Dock = DockStyle.Fill;
+            KategorieList.Location = new Point(3, 35);
             KategorieList.Name = "KategorieList";
-            KategorieList.Size = new Size(121, 628);
-            KategorieList.TabIndex = 8;
+            KategorieList.Size = new Size(136, 530);
+            KategorieList.TabIndex = 1;
             KategorieList.UseCompatibleStateImageBehavior = false;
-            KategorieList.View = View.SmallIcon;
-            KategorieList.SelectedIndexChanged += KategorieList_SelectedIndexChanged;
             // 
-            // KategorieBox
+            // label2
             // 
-            KategorieBox.Location = new Point(1, 27);
-            KategorieBox.Name = "KategorieBox";
-            KategorieBox.Size = new Size(121, 25);
-            KategorieBox.TabIndex = 9;
-            KategorieBox.Text = "Kategorie";
-            KategorieBox.TextAlign = HorizontalAlignment.Center;
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.Window;
+            label2.Dock = DockStyle.Fill;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(136, 32);
+            label2.TabIndex = 2;
+            label2.Text = "Kategorie";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // splitContainer2
+            // 
+            splitContainer2.Dock = DockStyle.Fill;
+            splitContainer2.Location = new Point(0, 0);
+            splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            splitContainer2.Panel1.Controls.Add(tableLayoutPanel3);
+            // 
+            // splitContainer2.Panel2
+            // 
+            splitContainer2.Panel2.Controls.Add(splitContainer3);
+            splitContainer2.Size = new Size(613, 568);
+            splitContainer2.SplitterDistance = 155;
+            splitContainer2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.Controls.Add(ProjektList, 0, 1);
+            tableLayoutPanel3.Controls.Add(label3, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 5.660377F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 94.33963F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(155, 568);
+            tableLayoutPanel3.TabIndex = 1;
+            // 
+            // ProjektList
+            // 
+            ProjektList.Dock = DockStyle.Fill;
+            ProjektList.Location = new Point(3, 35);
+            ProjektList.Name = "ProjektList";
+            ProjektList.Size = new Size(149, 530);
+            ProjektList.TabIndex = 1;
+            ProjektList.UseCompatibleStateImageBehavior = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.Window;
+            label3.Dock = DockStyle.Fill;
+            label3.Location = new Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(149, 32);
+            label3.TabIndex = 2;
+            label3.Text = "Projekty";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // splitContainer3
+            // 
+            splitContainer3.Dock = DockStyle.Fill;
+            splitContainer3.Location = new Point(0, 0);
+            splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            splitContainer3.Panel1.Controls.Add(tableLayoutPanel5);
+            // 
+            // splitContainer3.Panel2
+            // 
+            splitContainer3.Panel2.Controls.Add(splitContainer4);
+            splitContainer3.Size = new Size(454, 568);
+            splitContainer3.SplitterDistance = 150;
+            splitContainer3.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel5.Controls.Add(ZadanieList, 0, 1);
+            tableLayoutPanel5.Controls.Add(label4, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 2;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 5.660377F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 94.33963F));
+            tableLayoutPanel5.Size = new Size(150, 568);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // ZadanieList
+            // 
+            ZadanieList.Dock = DockStyle.Fill;
+            ZadanieList.Location = new Point(3, 35);
+            ZadanieList.Name = "ZadanieList";
+            ZadanieList.Size = new Size(144, 530);
+            ZadanieList.TabIndex = 1;
+            ZadanieList.UseCompatibleStateImageBehavior = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.Window;
+            label4.Dock = DockStyle.Fill;
+            label4.Location = new Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(144, 32);
+            label4.TabIndex = 2;
+            label4.Text = "Zadania";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // splitContainer4
+            // 
+            splitContainer4.Dock = DockStyle.Fill;
+            splitContainer4.Location = new Point(0, 0);
+            splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            splitContainer4.Panel1.Controls.Add(tableLayoutPanel6);
+            // 
+            // splitContainer4.Panel2
+            // 
+            splitContainer4.Panel2.Controls.Add(tableLayoutPanel7);
+            splitContainer4.Size = new Size(300, 568);
+            splitContainer4.SplitterDistance = 149;
+            splitContainer4.TabIndex = 0;
+            splitContainer4.SplitterMoved += splitContainer4_SplitterMoved;
+            // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel6.Controls.Add(CzynnoscList, 0, 1);
+            tableLayoutPanel6.Controls.Add(label5, 0, 0);
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+            tableLayoutPanel6.Location = new Point(0, 0);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 2;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 5.660377F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 94.33963F));
+            tableLayoutPanel6.Size = new Size(149, 568);
+            tableLayoutPanel6.TabIndex = 1;
+            // 
+            // CzynnoscList
+            // 
+            CzynnoscList.Dock = DockStyle.Fill;
+            CzynnoscList.Location = new Point(3, 35);
+            CzynnoscList.Name = "CzynnoscList";
+            CzynnoscList.Size = new Size(143, 530);
+            CzynnoscList.TabIndex = 1;
+            CzynnoscList.UseCompatibleStateImageBehavior = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.Window;
+            label5.Dock = DockStyle.Fill;
+            label5.Location = new Point(3, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(143, 32);
+            label5.TabIndex = 2;
+            label5.Text = "Czynności";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Controls.Add(label1, 0, 0);
+            tableLayoutPanel7.Controls.Add(panel1, 0, 1);
+            tableLayoutPanel7.Dock = DockStyle.Fill;
+            tableLayoutPanel7.Location = new Point(0, 0);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 2;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 9.189189F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 90.8108139F));
+            tableLayoutPanel7.Size = new Size(147, 568);
+            tableLayoutPanel7.TabIndex = 0;
+            tableLayoutPanel7.Paint += tableLayoutPanel7_Paint_1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Window;
+            label1.Dock = DockStyle.Fill;
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(141, 52);
+            label1.TabIndex = 0;
+            label1.Text = "Projekt01";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Window;
+            panel1.Controls.Add(Time_txt);
+            panel1.Controls.Add(Przerwa_btn);
+            panel1.Controls.Add(Stop_btn);
+            panel1.Controls.Add(Start_btn);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 55);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(141, 510);
+            panel1.TabIndex = 1;
+            // 
+            // Time_txt
+            // 
+            Time_txt.Anchor = AnchorStyles.Top;
+            Time_txt.Location = new Point(24, 7);
+            Time_txt.Name = "Time_txt";
+            Time_txt.Size = new Size(92, 23);
+            Time_txt.TabIndex = 7;
+            Time_txt.Text = "1:02:30";
+            Time_txt.TextAlign = HorizontalAlignment.Center;
+            // 
+            // Przerwa_btn
+            // 
+            Przerwa_btn.Anchor = AnchorStyles.Top;
+            Przerwa_btn.AutoSize = true;
+            Przerwa_btn.Location = new Point(24, 98);
+            Przerwa_btn.Name = "Przerwa_btn";
+            Przerwa_btn.Size = new Size(92, 25);
+            Przerwa_btn.TabIndex = 6;
+            Przerwa_btn.Text = "Przerwa";
+            Przerwa_btn.UseVisualStyleBackColor = true;
+            // 
+            // Stop_btn
+            // 
+            Stop_btn.Anchor = AnchorStyles.Top;
+            Stop_btn.AutoSize = true;
+            Stop_btn.Location = new Point(24, 67);
+            Stop_btn.Name = "Stop_btn";
+            Stop_btn.Size = new Size(92, 25);
+            Stop_btn.TabIndex = 5;
+            Stop_btn.Text = "Stop";
+            Stop_btn.UseVisualStyleBackColor = true;
+            // 
+            // Start_btn
+            // 
+            Start_btn.Anchor = AnchorStyles.Top;
+            Start_btn.AutoSize = true;
+            Start_btn.Location = new Point(24, 36);
+            Start_btn.Name = "Start_btn";
+            Start_btn.Size = new Size(92, 25);
+            Start_btn.TabIndex = 4;
+            Start_btn.Text = "Start";
+            Start_btn.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel4.Controls.Add(textBox4, 0, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(0, 0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 2;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.Size = new Size(200, 100);
+            tableLayoutPanel4.TabIndex = 0;
+            // 
+            // textBox4
+            // 
+            textBox4.Dock = DockStyle.Fill;
+            textBox4.Location = new Point(3, 3);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(194, 23);
+            textBox4.TabIndex = 0;
+            // 
+            // listView4
+            // 
+            listView4.Dock = DockStyle.Fill;
+            listView4.Location = new Point(3, 32);
+            listView4.Name = "listView4";
+            listView4.Size = new Size(194, 415);
+            listView4.TabIndex = 1;
+            listView4.UseCompatibleStateImageBehavior = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel2.Controls.Add(textBox2, 0, 0);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(0, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(200, 100);
+            tableLayoutPanel2.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            textBox2.Dock = DockStyle.Fill;
+            textBox2.Location = new Point(3, 3);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(194, 23);
+            textBox2.TabIndex = 0;
+            // 
+            // listView2
+            // 
+            listView2.Dock = DockStyle.Fill;
+            listView2.Location = new Point(3, 32);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(194, 415);
+            listView2.TabIndex = 1;
+            listView2.UseCompatibleStateImageBehavior = false;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(941, 534);
-            Controls.Add(KategorieBox);
-            Controls.Add(KategorieList);
-            Controls.Add(panel1);
-            Controls.Add(treeView1);
+            ClientSize = new Size(759, 593);
+            Controls.Add(splitContainer1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            splitContainer2.Panel1.ResumeLayout(false);
+            splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
+            splitContainer2.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            splitContainer3.Panel1.ResumeLayout(false);
+            splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
+            splitContainer3.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel5.PerformLayout();
+            splitContainer4.Panel1.ResumeLayout(false);
+            splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer4).EndInit();
+            splitContainer4.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -473,7 +671,6 @@
         private ToolStripMenuItem plikToolStripMenuItem;
         private ToolStripMenuItem edycjaToolStripMenuItem;
         private ToolStripMenuItem widokToolStripMenuItem;
-        private TreeView treeView1;
         private System.Windows.Forms.Timer timer1;
         private ToolStripMenuItem zmieńNazwęToolStripMenuItem;
         private ToolStripMenuItem usuńToolStripMenuItem;
@@ -482,26 +679,6 @@
         private ToolStripMenuItem noweZadanieToolStripMenuItem;
         private ToolStripMenuItem generujRaportToolStripMenuItem;
         private ToolStripMenuItem pełnyEkranToolStripMenuItem;
-        private TextBox Time_txt;
-        private Button Start_btn;
-        private Button Stop_btn;
-        private Button Przerwa_btn;
-        private Label label1;
-        private Panel panel1;
-        private Panel panel4;
-        private Panel panel3;
-        private Panel panel2;
-        private TextBox textBox2;
-        private ListView ProjektList;
-        private ColumnHeader columnHeader1;
-        private ListView CzynnoscList;
-        private ColumnHeader columnHeader5;
-        private TextBox textBox4;
-        private ListView ZadanieList;
-        private ColumnHeader columnHeader3;
-        private TextBox textBox3;
-        private ListView KategorieList;
-        private TextBox KategorieBox;
         private ToolStripMenuItem nowaCzynnoscToolStripMenuItem;
         private ToolStripMenuItem nowaKategoriaToolStripMenuItem;
         private ToolStripMenuItem KategoriaDodajToolStrip;
@@ -512,5 +689,34 @@
         private ToolStripMenuItem ZadanieUsunToolStrip;
         private ToolStripMenuItem CzynnoscDodajToolStrip;
         private ToolStripMenuItem CzynnoscUsunToolStrip;
+        private SplitContainer splitContainer1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private SplitContainer splitContainer2;
+        private SplitContainer splitContainer3;
+        private SplitContainer splitContainer4;
+        private ListView KategorieList;
+        private TableLayoutPanel tableLayoutPanel4;
+        private TextBox textBox4;
+        private ListView listView4;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TextBox textBox2;
+        private ListView listView2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private ListView ProjektList;
+        private TableLayoutPanel tableLayoutPanel5;
+        private ListView ZadanieList;
+        private TableLayoutPanel tableLayoutPanel6;
+        private ListView CzynnoscList;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Label label1;
+        private Panel panel1;
+        private Button Start_btn;
+        private TextBox Time_txt;
+        private Button Przerwa_btn;
+        private Button Stop_btn;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }

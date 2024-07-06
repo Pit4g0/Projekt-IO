@@ -36,25 +36,25 @@
             // 
             // KategorieName_txt
             // 
-            KategorieName_txt.Location = new Point(166, 114);
+            KategorieName_txt.Location = new Point(166, 101);
             KategorieName_txt.Name = "KategorieName_txt";
-            KategorieName_txt.Size = new Size(142, 25);
+            KategorieName_txt.Size = new Size(142, 23);
             KategorieName_txt.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(166, 94);
+            label1.Location = new Point(166, 83);
             label1.Name = "label1";
-            label1.Size = new Size(104, 17);
+            label1.Size = new Size(92, 15);
             label1.TabIndex = 1;
             label1.Text = "Nazwa Kategorii";
             // 
             // Cancel_btn
             // 
-            Cancel_btn.Location = new Point(166, 145);
+            Cancel_btn.Location = new Point(166, 128);
             Cancel_btn.Name = "Cancel_btn";
-            Cancel_btn.Size = new Size(63, 23);
+            Cancel_btn.Size = new Size(63, 20);
             Cancel_btn.TabIndex = 2;
             Cancel_btn.Text = "Anuluj";
             Cancel_btn.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             // 
             // AddKategoria_btn
             // 
-            AddKategoria_btn.Location = new Point(235, 145);
+            AddKategoria_btn.Location = new Point(235, 128);
             AddKategoria_btn.Name = "AddKategoria_btn";
-            AddKategoria_btn.Size = new Size(73, 23);
+            AddKategoria_btn.Size = new Size(73, 20);
             AddKategoria_btn.TabIndex = 3;
             AddKategoria_btn.Text = "Zatwierdz";
             AddKategoria_btn.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // 
             // AddKategoriaForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(463, 251);
+            ClientSize = new Size(463, 221);
             Controls.Add(AddKategoria_btn);
             Controls.Add(Cancel_btn);
             Controls.Add(label1);
