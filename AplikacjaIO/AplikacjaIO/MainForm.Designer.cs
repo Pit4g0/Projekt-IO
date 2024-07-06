@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+<<<<<<< Updated upstream
+            ListViewItem listViewItem3 = new ListViewItem("Praca");
+            ListViewItem listViewItem4 = new ListViewItem("Szkoła");
+=======
+            ListViewItem listViewItem1 = new ListViewItem("Praca");
+            ListViewItem listViewItem2 = new ListViewItem("Szkoła");
+>>>>>>> Stashed changes
             menuStrip1 = new MenuStrip();
             plikToolStripMenuItem = new ToolStripMenuItem();
-            nowaKategoriaToolStripMenuItem = new ToolStripMenuItem();
-            KategoriaDodajToolStrip = new ToolStripMenuItem();
-            KategorieUsunToolStrip = new ToolStripMenuItem();
             NewProject_menu = new ToolStripMenuItem();
             ProjektDodajToolStrip = new ToolStripMenuItem();
             ProjektUsunToolStrip = new ToolStripMenuItem();
@@ -44,6 +48,9 @@
             CzynnoscDodajToolStrip = new ToolStripMenuItem();
             CzynnoscUsunToolStrip = new ToolStripMenuItem();
             generujRaportToolStripMenuItem = new ToolStripMenuItem();
+            nowaKategoriaToolStripMenuItem = new ToolStripMenuItem();
+            KategoriaDodajToolStrip = new ToolStripMenuItem();
+            KategorieUsunToolStrip = new ToolStripMenuItem();
             edycjaToolStripMenuItem = new ToolStripMenuItem();
             zmieńNazwęToolStripMenuItem = new ToolStripMenuItem();
             usuńToolStripMenuItem = new ToolStripMenuItem();
@@ -52,7 +59,7 @@
             pełnyEkranToolStripMenuItem = new ToolStripMenuItem();
             treeView1 = new TreeView();
             timer1 = new System.Windows.Forms.Timer(components);
-            Time_txt = new TextBox();
+            textBox1 = new TextBox();
             Start_btn = new Button();
             Stop_btn = new Button();
             Przerwa_btn = new Button();
@@ -61,15 +68,18 @@
             panel4 = new Panel();
             CzynnoscList = new ListView();
             columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
             textBox4 = new TextBox();
             panel3 = new Panel();
             ZadanieList = new ListView();
             columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             textBox3 = new TextBox();
             panel2 = new Panel();
             textBox2 = new TextBox();
             ProjektList = new ListView();
             columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
             KategorieList = new ListView();
             KategorieBox = new TextBox();
             menuStrip1.SuspendLayout();
@@ -92,39 +102,17 @@
             // 
             // plikToolStripMenuItem
             // 
-            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nowaKategoriaToolStripMenuItem, NewProject_menu, noweZadanieToolStripMenuItem, nowaCzynnoscToolStripMenuItem, generujRaportToolStripMenuItem });
+            plikToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewProject_menu, noweZadanieToolStripMenuItem, nowaCzynnoscToolStripMenuItem, generujRaportToolStripMenuItem, nowaKategoriaToolStripMenuItem });
             plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             plikToolStripMenuItem.Size = new Size(39, 21);
             plikToolStripMenuItem.Text = "Plik";
-            // 
-            // nowaKategoriaToolStripMenuItem
-            // 
-            nowaKategoriaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { KategoriaDodajToolStrip, KategorieUsunToolStrip });
-            nowaKategoriaToolStripMenuItem.Name = "nowaKategoriaToolStripMenuItem";
-            nowaKategoriaToolStripMenuItem.Size = new Size(180, 22);
-            nowaKategoriaToolStripMenuItem.Text = "Kategorie";
-            nowaKategoriaToolStripMenuItem.Click += nowaKategoriaToolStripMenuItem_Click;
-            // 
-            // KategoriaDodajToolStrip
-            // 
-            KategoriaDodajToolStrip.Name = "KategoriaDodajToolStrip";
-            KategoriaDodajToolStrip.Size = new Size(111, 22);
-            KategoriaDodajToolStrip.Text = "Dodaj";
-            KategoriaDodajToolStrip.Click += KategoriaDodajToolStrip_Click;
-            // 
-            // KategorieUsunToolStrip
-            // 
-            KategorieUsunToolStrip.Name = "KategorieUsunToolStrip";
-            KategorieUsunToolStrip.Size = new Size(111, 22);
-            KategorieUsunToolStrip.Text = "Usuń";
-            KategorieUsunToolStrip.Click += KategorieUsunToolStrip_Click;
             // 
             // NewProject_menu
             // 
             NewProject_menu.DropDownItems.AddRange(new ToolStripItem[] { ProjektDodajToolStrip, ProjektUsunToolStrip });
             NewProject_menu.Name = "NewProject_menu";
-            NewProject_menu.Size = new Size(180, 22);
-            NewProject_menu.Text = "Projekty";
+            NewProject_menu.Size = new Size(168, 22);
+            NewProject_menu.Text = "Nowy Projekt";
             NewProject_menu.Click += NewProject_menu_Click;
             // 
             // ProjektDodajToolStrip
@@ -145,8 +133,8 @@
             // 
             noweZadanieToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ZadanieDodajToolStrip, ZadanieUsunToolStrip });
             noweZadanieToolStripMenuItem.Name = "noweZadanieToolStripMenuItem";
-            noweZadanieToolStripMenuItem.Size = new Size(180, 22);
-            noweZadanieToolStripMenuItem.Text = "Zadania";
+            noweZadanieToolStripMenuItem.Size = new Size(168, 22);
+            noweZadanieToolStripMenuItem.Text = "Nowe Zadanie";
             // 
             // ZadanieDodajToolStrip
             // 
@@ -166,8 +154,8 @@
             // 
             nowaCzynnoscToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CzynnoscDodajToolStrip, CzynnoscUsunToolStrip });
             nowaCzynnoscToolStripMenuItem.Name = "nowaCzynnoscToolStripMenuItem";
-            nowaCzynnoscToolStripMenuItem.Size = new Size(180, 22);
-            nowaCzynnoscToolStripMenuItem.Text = "Czynności";
+            nowaCzynnoscToolStripMenuItem.Size = new Size(168, 22);
+            nowaCzynnoscToolStripMenuItem.Text = "Nowa Czynność";
             // 
             // CzynnoscDodajToolStrip
             // 
@@ -186,9 +174,30 @@
             // generujRaportToolStripMenuItem
             // 
             generujRaportToolStripMenuItem.Name = "generujRaportToolStripMenuItem";
-            generujRaportToolStripMenuItem.Size = new Size(180, 22);
+            generujRaportToolStripMenuItem.Size = new Size(168, 22);
             generujRaportToolStripMenuItem.Text = "Generuj raport";
-            generujRaportToolStripMenuItem.Click += generujRaportToolStripMenuItem_Click;
+            // 
+            // nowaKategoriaToolStripMenuItem
+            // 
+            nowaKategoriaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { KategoriaDodajToolStrip, KategorieUsunToolStrip });
+            nowaKategoriaToolStripMenuItem.Name = "nowaKategoriaToolStripMenuItem";
+            nowaKategoriaToolStripMenuItem.Size = new Size(168, 22);
+            nowaKategoriaToolStripMenuItem.Text = "Kategorie";
+            nowaKategoriaToolStripMenuItem.Click += nowaKategoriaToolStripMenuItem_Click;
+            // 
+            // KategoriaDodajToolStrip
+            // 
+            KategoriaDodajToolStrip.Name = "KategoriaDodajToolStrip";
+            KategoriaDodajToolStrip.Size = new Size(111, 22);
+            KategoriaDodajToolStrip.Text = "Dodaj";
+            KategoriaDodajToolStrip.Click += KategoriaDodajToolStrip_Click;
+            // 
+            // KategorieUsunToolStrip
+            // 
+            KategorieUsunToolStrip.Name = "KategorieUsunToolStrip";
+            KategorieUsunToolStrip.Size = new Size(111, 22);
+            KategorieUsunToolStrip.Text = "Usuń";
+            KategorieUsunToolStrip.Click += KategorieUsunToolStrip_Click;
             // 
             // edycjaToolStripMenuItem
             // 
@@ -238,17 +247,17 @@
             treeView1.TabIndex = 1;
             treeView1.AfterSelect += treeView1_AfterSelect;
             // 
-            // Time_txt
+            // textBox1
             // 
-            Time_txt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Time_txt.Location = new Point(654, 180);
-            Time_txt.Margin = new Padding(50, 57, 50, 57);
-            Time_txt.Name = "Time_txt";
-            Time_txt.RightToLeft = RightToLeft.Yes;
-            Time_txt.Size = new Size(117, 25);
-            Time_txt.TabIndex = 5;
-            Time_txt.Text = "1:02:30";
-            Time_txt.TextAlign = HorizontalAlignment.Center;
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Location = new Point(654, 180);
+            textBox1.Margin = new Padding(50, 57, 50, 57);
+            textBox1.Name = "textBox1";
+            textBox1.RightToLeft = RightToLeft.Yes;
+            textBox1.Size = new Size(117, 25);
+            textBox1.TabIndex = 5;
+            textBox1.Text = "1:02:30";
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // Start_btn
             // 
@@ -259,7 +268,6 @@
             Start_btn.TabIndex = 6;
             Start_btn.Text = "Start";
             Start_btn.UseVisualStyleBackColor = true;
-            Start_btn.Click += Start_btn_Click;
             // 
             // Stop_btn
             // 
@@ -270,7 +278,6 @@
             Stop_btn.TabIndex = 7;
             Stop_btn.Text = "Stop";
             Stop_btn.UseVisualStyleBackColor = true;
-            Stop_btn.Click += Stop_btn_Click_1;
             // 
             // Przerwa_btn
             // 
@@ -281,7 +288,6 @@
             Przerwa_btn.TabIndex = 8;
             Przerwa_btn.Text = "Przerwa";
             Przerwa_btn.UseVisualStyleBackColor = true;
-            Przerwa_btn.Click += Przerwa_btn_Click_1;
             // 
             // label1
             // 
@@ -302,7 +308,7 @@
             panel1.Controls.Add(Przerwa_btn);
             panel1.Controls.Add(Stop_btn);
             panel1.Controls.Add(Start_btn);
-            panel1.Controls.Add(Time_txt);
+            panel1.Controls.Add(textBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(121, 27);
             panel1.Name = "panel1";
@@ -323,19 +329,23 @@
             // CzynnoscList
             // 
             CzynnoscList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            CzynnoscList.Columns.AddRange(new ColumnHeader[] { columnHeader5 });
+            CzynnoscList.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6 });
             CzynnoscList.Location = new Point(0, 24);
             CzynnoscList.Name = "CzynnoscList";
             CzynnoscList.Size = new Size(200, 483);
             CzynnoscList.TabIndex = 4;
             CzynnoscList.UseCompatibleStateImageBehavior = false;
-            CzynnoscList.View = View.List;
-            CzynnoscList.SelectedIndexChanged += CzynnoscList_SelectedIndexChanged;
+            CzynnoscList.View = View.Details;
             // 
             // columnHeader5
             // 
             columnHeader5.Text = "Nazwa";
-            columnHeader5.Width = 200;
+            columnHeader5.Width = 95;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Czas";
+            columnHeader6.Width = 95;
             // 
             // textBox4
             // 
@@ -360,19 +370,27 @@
             // ZadanieList
             // 
             ZadanieList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            ZadanieList.Columns.AddRange(new ColumnHeader[] { columnHeader3 });
+            ZadanieList.Columns.AddRange(new ColumnHeader[] { columnHeader3, columnHeader4 });
             ZadanieList.Location = new Point(0, 24);
             ZadanieList.Name = "ZadanieList";
             ZadanieList.Size = new Size(200, 483);
             ZadanieList.TabIndex = 3;
             ZadanieList.UseCompatibleStateImageBehavior = false;
-            ZadanieList.View = View.List;
+            ZadanieList.View = View.Details;
+<<<<<<< Updated upstream
+=======
             ZadanieList.SelectedIndexChanged += ZadanieList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // columnHeader3
             // 
             columnHeader3.Text = "Nazwa";
-            columnHeader3.Width = 200;
+            columnHeader3.Width = 95;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Czas";
+            columnHeader4.Width = 95;
             // 
             // textBox3
             // 
@@ -408,28 +426,45 @@
             // ProjektList
             // 
             ProjektList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            ProjektList.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            ProjektList.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
             ProjektList.Location = new Point(0, 24);
             ProjektList.Name = "ProjektList";
             ProjektList.Size = new Size(195, 483);
             ProjektList.TabIndex = 0;
             ProjektList.UseCompatibleStateImageBehavior = false;
+            ProjektList.View = View.Details;
+<<<<<<< Updated upstream
+=======
             ProjektList.SelectedIndexChanged += ProjektList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // columnHeader1
             // 
-            columnHeader1.Text = "";
-            columnHeader1.Width = 200;
+            columnHeader1.Text = "Nazwa";
+            columnHeader1.Width = 95;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Czas";
+            columnHeader2.Width = 95;
             // 
             // KategorieList
             // 
+<<<<<<< Updated upstream
+            KategorieList.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4 });
+=======
+            KategorieList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+>>>>>>> Stashed changes
             KategorieList.Location = new Point(1, 51);
             KategorieList.Name = "KategorieList";
             KategorieList.Size = new Size(121, 628);
             KategorieList.TabIndex = 8;
             KategorieList.UseCompatibleStateImageBehavior = false;
             KategorieList.View = View.SmallIcon;
+<<<<<<< Updated upstream
+=======
             KategorieList.SelectedIndexChanged += KategorieList_SelectedIndexChanged;
+>>>>>>> Stashed changes
             // 
             // KategorieBox
             // 
@@ -482,7 +517,7 @@
         private ToolStripMenuItem noweZadanieToolStripMenuItem;
         private ToolStripMenuItem generujRaportToolStripMenuItem;
         private ToolStripMenuItem pełnyEkranToolStripMenuItem;
-        private TextBox Time_txt;
+        private TextBox textBox1;
         private Button Start_btn;
         private Button Stop_btn;
         private Button Przerwa_btn;
@@ -494,11 +529,14 @@
         private TextBox textBox2;
         private ListView ProjektList;
         private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
         private ListView CzynnoscList;
         private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
         private TextBox textBox4;
         private ListView ZadanieList;
         private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
         private TextBox textBox3;
         private ListView KategorieList;
         private TextBox KategorieBox;

@@ -16,9 +16,6 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RaportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ZadanieForm.cs">
       <SubType>Form</SubType>
     </Compile>

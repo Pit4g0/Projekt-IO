@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,56 +44,7 @@ namespace AplikacjaIO
 
         private void Erase_btn_Click(object sender, EventArgs e)
         {
-            string selectedKategoria = Erase_comboBox.SelectedItem.ToString();
-            switch (GlobalData.tabela)
-            {
-                case "Kategoria":   
-                    if (Erase_comboBox.SelectedItem != null)
-                    {
-                     DataBase dataBase = new DataBase();
-                     dataBase.KategoriaToArchiwa(selectedKategoria);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Proszę wybrać kategorię do usunięcia.");
-                    }
-                break;
-                case "Projekt":
-                    if (Erase_comboBox.SelectedItem != null)
-                    {
-                        DataBase dataBase = new DataBase();
-                        dataBase.ProjektToArchiwa(selectedKategoria);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Proszę wybrać projekt do usunięcia.");
-                    }
-                    break;
-                case "Zadanie":
-                    if (Erase_comboBox.SelectedItem != null)
-                    {
-                        DataBase dataBase = new DataBase();
-                        dataBase.ZadanieToArchiwa(selectedKategoria);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Proszę wybrać zadanie do usunięcia.");
-                    }
-                    break;
-                case "Czynnosc":
-                    if (Erase_comboBox.SelectedItem != null)
-                    {
-                        DataBase dataBase = new DataBase();
-                        dataBase.CzynnoscToArchiwa(selectedKategoria);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Proszę wybrać czynnosc do usunięcia.");
-                    }
-                    break;
-            }
-                
-         
-           }
+
+        }
     }
 }

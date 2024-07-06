@@ -8,7 +8,6 @@ namespace AplikacjaIO.Klasy
 {
     public static class GlobalData
     {
-        public static string tabela;
         public static List<string> ListValues { get; set; } = new List<string>();
     }
 }

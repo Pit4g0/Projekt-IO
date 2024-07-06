@@ -136,5 +136,3 @@ D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\Ap
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.ProjektForm.resources
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.ZadanieForm.resources
 D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.CzynnoscForm.resources
-D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.Properties.Resources.resources
-D:\dane_z_kompa\zajęcia\studia\Inżynieria_Oprogramowania\Projekt\Projekt-IO\AplikacjaIO\AplikacjaIO\obj\Debug\net8.0-windows\AplikacjaIO.RaportForm.resources
