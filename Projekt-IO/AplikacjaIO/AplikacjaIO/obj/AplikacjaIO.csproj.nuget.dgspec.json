@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\repo\\Projekt-IO\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {}
+    "C:\\Users\\barte\\Pulpit\\głupoty\\Teleinformatyka\\sem_4\\IO-laby\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\repo\\Projekt-IO\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {
+    "C:\\Users\\barte\\Pulpit\\głupoty\\Teleinformatyka\\sem_4\\IO-laby\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\repo\\Projekt-IO\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
+        "projectUniqueName": "C:\\Users\\barte\\Pulpit\\głupoty\\Teleinformatyka\\sem_4\\IO-laby\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
         "projectName": "AplikacjaIO",
-        "projectPath": "C:\\Users\\User\\Desktop\\repo\\Projekt-IO\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\repo\\Projekt-IO\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\obj\\",
+        "projectPath": "C:\\Users\\barte\\Pulpit\\głupoty\\Teleinformatyka\\sem_4\\IO-laby\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\AplikacjaIO.csproj",
+        "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\barte\\Pulpit\\głupoty\\Teleinformatyka\\sem_4\\IO-laby\\Projekt\\Projekt-IO\\AplikacjaIO\\AplikacjaIO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\barte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

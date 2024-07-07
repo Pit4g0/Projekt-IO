@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using AplikacjaIO;
 using AplikacjaIO.Klasy;
+using AplikacjaIO.Properties;
 
 namespace Projekt_IO_3
 {
@@ -16,8 +17,8 @@ namespace Projekt_IO_3
         private DateTime _startTime;
         private bool _isRunning;
         private bool _isPaused;
-
-
+        private NotifyIcon notifyIcon;
+        private bool isApplicationRunning;
         public MainForm()
         {
             InitializeComponent();
@@ -29,7 +30,71 @@ namespace Projekt_IO_3
             this.KategorieList.SelectedIndexChanged += new System.EventHandler(this.KategorieList_SelectedIndexChanged);
             this.ProjektList.SelectedIndexChanged += new System.EventHandler(this.ProjektList_SelectedIndexChanged);
             this.ZadanieList.SelectedIndexChanged += new System.EventHandler(this.ZadanieList_SelectedIndexChanged);
+
+            
+            // Inicjalizacja NotifyIcon
+            notifyIcon = new NotifyIcon();
+            notifyIcon.Icon = Resources.timer32;
+            notifyIcon.Visible = true; // Ustawienie widoczności
+            notifyIcon.Text = "Projekt"; // Tekst, który będzie wyświetlany po najechaniu na ikonę
+
+            notifyIcon.Click += new EventHandler(NotifyIcon_Click);
+            notifyIcon.DoubleClick += new EventHandler(NotifyIcon_DoubleClick);
+
+            // Utwórz menu kontekstowe
+            ContextMenuStrip contextMenu = new ContextMenuStrip();
+            contextMenu.Items.Add("Zamknij", null, OnCloseClick);
+            notifyIcon.ContextMenuStrip = contextMenu;
+
+            isApplicationRunning = false;
         }
+
+        private void NotifyIcon_Click(object sender, EventArgs e)
+        {
+            HandleIconClick();
+        }
+
+        private void NotifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            HandleIconClick();
+        }
+
+        private void HandleIconClick()
+        {
+            if (!isApplicationRunning)
+            {
+                isApplicationRunning = true;
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                this.BringToFront();
+            }
+        }
+
+        private void OnCloseClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // Ukryj NotifyIcon przed zamknięciem formularza
+            notifyIcon.Visible = false;
+            notifyIcon.Dispose();
+            base.OnFormClosing(e);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                isApplicationRunning = false;
+            }
+        }
+
+
+
         private void LoadProjektList()
         {
             DataBase dataBase = new DataBase();
@@ -453,6 +518,16 @@ namespace Projekt_IO_3
         }
 
         private void splitContainer4_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
